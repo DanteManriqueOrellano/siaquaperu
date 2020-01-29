@@ -1,12 +1,35 @@
 import { NgModule } from '@angular/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
+import { ShellComponent } from './shell/shell.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDividerModule} from '@angular/material/divider';
+
+import { LayoutModule } from '@angular/cdk/layout';
+import { MenuizquierdoComponent } from './shell/menuizquierdo/menuizquierdo.component';
+import { BodyComponent } from './shell/body/body.component';
+import { HeaderComponent } from './shell/body/header/header.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [ShellComponent, MenuizquierdoComponent, BodyComponent, HeaderComponent],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
+    MatButtonModule,
+    BrowserAnimationsModule,
+    LayoutModule,
+    MatDividerModule
+    
+  ],
+  exports:[ShellComponent]
 })
 export class CoreModule { }

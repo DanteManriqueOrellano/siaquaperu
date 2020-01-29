@@ -1,0 +1,44 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>
+      <link rel="icon" sizes="192x192" href="google.com">
+    </mat-toolbar>
+    
+    <mat-nav-list>
+      <mat-divider></mat-divider>
+      <a mat-list-item href="#">Link 1</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item href="#">Link 2</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item href="#">Link 3</a>
+      <mat-divider></mat-divider>
+    </mat-nav-list>
+
+    <mat-list>
+      <mat-list-item *ngFor="let message of ['messages','mensaje','otromensaje']">
+        <mat-icon matListIcon>home</mat-icon>
+          <span> subject </span>
+          <mat-divider [inset]='true'></mat-divider>
+      </mat-list-item>
+    </mat-list>
+    
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>siaquaperu</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
