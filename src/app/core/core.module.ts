@@ -8,11 +8,13 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatRippleModule} from '@angular/material/core';
 
 import { LayoutModule } from '@angular/cdk/layout';
 import { MenuizquierdoComponent } from './shell/menuizquierdo/menuizquierdo.component';
 import { BodyComponent } from './shell/body/body.component';
 import { HeaderComponent } from './shell/body/header/header.component';
+import {MatSelectModule} from '@angular/material/select';
 
 
 
@@ -27,8 +29,9 @@ import { HeaderComponent } from './shell/body/header/header.component';
     MatButtonModule,
     BrowserAnimationsModule,
     LayoutModule,
-    MatDividerModule
-    
+    MatDividerModule,
+    MatSelectModule,
+    MatRippleModule,
   ],
   exports:[ShellComponent]
 })

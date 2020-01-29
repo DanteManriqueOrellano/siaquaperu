@@ -15,6 +15,7 @@ export class MenuizquierdoComponent {
       map(result => result.matches),
       shareReplay()
     );
+  color = "rgb(0, 0, 255)"
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
