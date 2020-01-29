@@ -21,6 +21,7 @@ import { HeaderComponent } from './shell/body/header/header.component';
 import {MatSelectModule} from '@angular/material/select';
 import { CoreRoutingModule } from './core-routing.module';
 import { MainModule } from '../main/main.module';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -42,6 +43,7 @@ import { MainModule } from '../main/main.module';
     CoreRoutingModule,
     MainModule,
     RouterModule,
+    NgbModule,
   ],
   exports:[ShellComponent]
 })
