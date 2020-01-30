@@ -1,9 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { DialogoComponent } from '../dialogo/dialogo.component';
+
 export interface PeriodicElement {
   name: string;
   position: number;
   weight: number;
   symbol: string;
+}
+export interface DialogData {
+  position: number,
+  name: string,
+  weight: number,
+  symbol:string
 }
 const ELEMENT_DATA: PeriodicElement[] = [
   {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
@@ -21,8 +30,33 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class ConfiguracionComponent  {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol','actions'];
   dataSource = ELEMENT_DATA;
-  editar(event){
-    console.log(event)
+  position: number;
+  name: string;
+  weight: number;
+  symbol:string;
+  constructor(public dialog: MatDialog){
+
+  }
+  editar(event) {
+    const objIndex = this.dataSource.findIndex((obj => obj.position == event.position));
+
+    
+
+    const dialogRef = this.dialog.open(DialogoComponent, {
+      width: '250px',
+      data: {
+        name: this.name,
+        position: this.position,
+        weight: this.weight,
+        symbol: this.symbol
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.dataSource[objIndex].name = result
+      this.name = result;
+    });
   }
 
 }
