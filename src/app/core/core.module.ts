@@ -22,6 +22,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { CoreRoutingModule } from './core-routing.module';
 import { MainModule } from '../main/main.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ConfiguracionModule } from '../configuracion/configuracion.module';
 
 
 
@@ -44,6 +45,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     MainModule,
     RouterModule,
     NgbModule,
+    ConfiguracionModule,
   ],
   exports:[ShellComponent]
 })
