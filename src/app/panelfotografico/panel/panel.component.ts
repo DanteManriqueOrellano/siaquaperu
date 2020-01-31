@@ -30,6 +30,17 @@ export class PanelComponent extends NgxSubFormComponent<IGaleria[],IPanel> imple
       return new FormControl(value) 
     }
   }
+  public removeUnaGaleria(index: number){
+
+  }
+  public addUnaGaleria(){
+    
+    this.formGroupControls.galerias.push(this.createFormArrayControl('galerias',{
+      fotos_descripciones:[],
+      localidad:'',
+    }))
+
+  }
   
   
 

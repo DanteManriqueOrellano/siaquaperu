@@ -1,1 +1,42 @@
-<p>panel works!</p>
+<div class="container">
+  <section [formGroup]="formGroup">
+
+    <div class="row">
+      <div class="col-6">
+        <mat-form-field>
+          <input matInput placeholder="Nombre Proyecto" type="text" [formControlName]="formControlNames.nombreProyecto"
+            autocomplete="off" />
+        </mat-form-field>
+
+      </div>
+      <div class="col-6">
+        <mat-form-field>
+          <input matInput placeholder="constructora" type="text" [formControlName]=formControlNames.constructora
+            autocomplete="off" />
+        </mat-form-field>
+
+      </div>
+      
+    
+    </div>
+
+    <div class="row">
+      <div [formArrayName]="formControlNames.galerias"
+        *ngFor="let unaGaleria of formGroupControls.galerias.controls; let i = index">
+
+        <app-galeria [formControl]="unaGaleria"></app-galeria>
+
+
+
+        <button mat-mini-fab color="primary" (click)="removeUnaGaleria(i)" [disabled]="formGroup.disabled">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <button mat-raised-button color="primary" (click)="addUnaGaleria()" [disabled]="formGroup.disabled">
+        Agregar Nueva Galeria
+      </button>
+    </div>
+  </section>
+</div>

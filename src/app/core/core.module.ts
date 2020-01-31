@@ -24,6 +24,7 @@ import { MainModule } from '../main/main.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ConfiguracionModule } from '../configuracion/configuracion.module';
 import { PanelfotograficoModule } from '../panelfotografico/panelfotografico.module';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 
@@ -50,6 +51,8 @@ import { PanelfotograficoModule } from '../panelfotografico/panelfotografico.mod
     NgbModule,
     ConfiguracionModule,
     PanelfotograficoModule,
+    ReactiveFormsModule,
+    FormsModule,
 
 
   ],
