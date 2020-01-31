@@ -23,6 +23,9 @@ import { CoreRoutingModule } from './core-routing.module';
 import { MainModule } from '../main/main.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ConfiguracionModule } from '../configuracion/configuracion.module';
+import { PanelfotograficoModule } from '../panelfotografico/panelfotografico.module';
+
+
 
 
 
@@ -46,6 +49,9 @@ import { ConfiguracionModule } from '../configuracion/configuracion.module';
     RouterModule,
     NgbModule,
     ConfiguracionModule,
+    PanelfotograficoModule,
+
+
   ],
   exports:[ShellComponent]
 })
