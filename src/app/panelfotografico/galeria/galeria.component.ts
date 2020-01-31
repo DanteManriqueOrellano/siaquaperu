@@ -28,6 +28,7 @@ export class GaleriaComponent extends NgxSubFormComponent<IFoto_descripcion[],IG
     }
   }
   public removeUnaFoto_Descripcion(index:number){
+    this.formGroupControls.fotos_descripciones.removeAt(index);
 
   }
   public addUnaFoto_Descripcion(){

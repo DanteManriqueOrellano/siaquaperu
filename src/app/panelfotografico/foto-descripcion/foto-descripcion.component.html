@@ -1,5 +1,6 @@
 <section [formGroup]="formGroup">
-  <div class="row">
+  <mat-divider></mat-divider>
+  <div class="row" [ngStyle]="{'background-color':'pink'}">
     <div class="col-6" >
       <mat-form-field>
         <input matInput type="text" placeholder="urlfirestore" [formControlName]="formControlNames.urlfirestore" autocomplete="off"/>
@@ -12,7 +13,7 @@
     </div>
 
   </div>
-  <mat-divider></mat-divider>
+  
 </section>
     
   

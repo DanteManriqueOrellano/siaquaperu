@@ -1,5 +1,6 @@
-<div class="container">
-  <section [formGroup]="formGroup">
+<section [formGroup]="formGroup">
+  <div class="container">
+
 
     <div class="row">
       <div class="col-6">
@@ -16,27 +17,37 @@
         </mat-form-field>
 
       </div>
-      
-    
+
     </div>
+
 
     <div class="row">
       <div [formArrayName]="formControlNames.galerias"
         *ngFor="let unaGaleria of formGroupControls.galerias.controls; let i = index">
+        
+        
+          <app-galeria [formControl]="unaGaleria"></app-galeria>
 
-        <app-galeria [formControl]="unaGaleria"></app-galeria>
+        
+
+        
 
 
 
-        <button mat-mini-fab color="primary" (click)="removeUnaGaleria(i)" [disabled]="formGroup.disabled">
+        <button mat-stroked-button color="warn" (click)="removeUnaGaleria(i)" [disabled]="formGroup.disabled">
           <mat-icon>delete</mat-icon>
         </button>
       </div>
     </div>
+
     <div class="row">
-      <button mat-raised-button color="primary" (click)="addUnaGaleria()" [disabled]="formGroup.disabled">
+      <button mat-stroked-button color="primary" (click)="addUnaGaleria()" [disabled]="formGroup.disabled">
         Agregar Nueva Galeria
       </button>
+      <button mat-stroked-button color="primary" (click)="addUnaGaleria()" [disabled]="formGroup.disabled">
+        Grabar e Imprimir Panel Fotografico
+      </button>
     </div>
-  </section>
-</div>
+
+  </div>
+</section>

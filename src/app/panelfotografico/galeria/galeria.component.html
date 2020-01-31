@@ -1,66 +1,41 @@
-<!--
-  <fieldset [formGroup]="formGroup" class="container">
-    <legend>Galeria</legend>
-    <mat-form-field>
-      <input
-        matInput
-        type="text"
-        placeholder="localidad"
-        [formControlName]="formControlNames.localidad"
-        autocomplete="off"
-      />
-    </mat-form-field>
-  
-    <div
-      [formArrayName]="formControlNames.fotos_descripciones"
-      *ngFor="let unaFoto_descripcion of formGroupControls.fotos_descripciones.controls; let i = index"
-    >
-      <app-foto-descripcion [formControl]="unaFoto_descripcion"></app-foto-descripcion>
-  
-      <button mat-mini-fab color="primary" (click)="removeUnaFoto_Descripcion(i)" [disabled]="formGroup.disabled">
-        <mat-icon>delete</mat-icon>
-      </button>
-    </div>
-  
-    
-  </fieldset>
-
-
--->
-
-
-
-
 <section [formGroup]="formGroup">
-  <mat-card class="example-card">
+  
+    <mat-card class="example-card">
 
-    <mat-card-content>
-      <mat-form-field>
-        <input matInput type="text" placeholder="localidad" [formControlName]="formControlNames.localidad" autocomplete="off" />
-      </mat-form-field>
-
-      <div  [formArrayName]="formControlNames.fotos_descripciones"
-        *ngFor="let unaFoto_descripcion of formGroupControls.fotos_descripciones.controls; let i = index">
-        <app-foto-descripcion [formControl]="unaFoto_descripcion"></app-foto-descripcion>
-
-        <button mat-mini-fab color="primary" (click)="removeUnaFoto_Descripcion(i)" [disabled]="formGroup.disabled">
-          <mat-icon>delete</mat-icon>
+      <mat-card-content>
+        <mat-form-field>
+          <input matInput type="text" placeholder="localidad" [formControlName]="formControlNames.localidad" autocomplete="off" />
+        </mat-form-field>
+  
+        <div   [formArrayName]="formControlNames.fotos_descripciones"
+          *ngFor="let unaFoto_descripcion of formGroupControls.fotos_descripciones.controls; let i = index">
+              <app-foto-descripcion  [formControl]="unaFoto_descripcion"></app-foto-descripcion>
+  
+              <button mat-stroked-button color="warn" (click)="removeUnaFoto_Descripcion(i)" [disabled]="formGroup.disabled">
+                <mat-icon>delete</mat-icon>
+              </button>
+              <mat-divider></mat-divider>
+  
+          
+  
+          
+        </div>
+  
+  
+  
+      </mat-card-content>
+  
+      <mat-card-actions>
+  
+        <button mat-stroked-button color="primary" (click)="addUnaFoto_Descripcion()" [disabled]="formGroup.disabled">
+          Agregar una Foto Descripción
         </button>
-      </div>
+  
+      </mat-card-actions>
+      
+    </mat-card>
 
-
-
-    </mat-card-content>
-
-    <mat-card-actions>
-
-      <button mat-raised-button color="primary" (click)="addUnaFoto_Descripcion()" [disabled]="formGroup.disabled">
-        Agregar una Foto Descripción
-      </button>
-
-    </mat-card-actions>
-    
-  </mat-card>
+  
 
 </section>
   

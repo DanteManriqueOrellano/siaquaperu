@@ -31,6 +31,7 @@ export class PanelComponent extends NgxSubFormComponent<IGaleria[],IPanel> imple
     }
   }
   public removeUnaGaleria(index: number){
+    this.formGroupControls.galerias.removeAt(index);
 
   }
   public addUnaGaleria(){
@@ -41,6 +42,8 @@ export class PanelComponent extends NgxSubFormComponent<IGaleria[],IPanel> imple
     }))
 
   }
+  
+  
   
   
 
