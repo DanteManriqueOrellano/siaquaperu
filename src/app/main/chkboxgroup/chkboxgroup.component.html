@@ -1,0 +1,8 @@
+<section [formGroup]="formGroup">
+    <div [formArrayName]="formControlNames.chkboxes">
+        <div *ngFor="let control of formGroupControls.chkboxes.controls">
+            <app-chkbox [formControl]="control"></app-chkbox>
+          </div>
+    </div>
+
+</section>

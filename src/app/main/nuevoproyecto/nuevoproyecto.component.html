@@ -1,9 +1,25 @@
 <section [formGroup]="formGroup">
-    <input matInput placeholder="Nombre Proyecto" type="text" autocomplete="off" [formControlName=formControlNames.nombreProyecto></input>
-    <input matInput type="text" placeholder="Empresa Responsable" autocomplete="off" [formControlName]=formControlNames.empresaResponsable>
+  
+    <mat-form-field>
+        <input matInput placeholder="Nombre Proyecto" type="text" autocomplete="off" [formControlName]='formControlNames.nombreProyecto'>
+    </mat-form-field>
+  
+    <mat-form-field>
+        <input matInput type="text" placeholder="Empresa Responsable" autocomplete="off" [formControlName]='formControlNames.empresaResponsable'>
+    </mat-form-field>
+    
+    <h2>INSTALAR DEPENDENCIAS</h2>
     <!--
-        el boton grabará y pasará a la pantalla lista de las dependencias a instalar en el proyecto 
+        <app-chkboxgroup [formControl]="checkboxes"></app-chkboxgroup>
+
     -->
-    <button mat-button (click)='continuar()'> </button>
+    
+
+<hr>
+
+<!-- check how our data set looks like -->
+<!--
+<pre>{{ checkboxes.value | json }}</pre>
+-->
     
 </section>
