@@ -16,8 +16,11 @@ import { NuevoproyectoComponent } from './nuevoproyecto/nuevoproyecto.component'
 import { MainComponent } from './main/main.component';
 import { ChkboxComponent } from './chkbox/chkbox.component';
 import { ChkboxgroupComponent } from './chkboxgroup/chkboxgroup.component';
+
+import { ListaetapaComponent } from './nuevoproyecto/listaetapa/listaetapa.component';
+import { EtapaComponent } from './nuevoproyecto/etapa/etapa.component';
 @NgModule({
-  declarations: [MainComponent, NuevoproyectoComponent, ChkboxComponent, ChkboxgroupComponent],
+  declarations: [MainComponent, NuevoproyectoComponent, ChkboxComponent, ChkboxgroupComponent, ListaetapaComponent, EtapaComponent],
   imports: [
     CommonModule,
     MatCardModule,
