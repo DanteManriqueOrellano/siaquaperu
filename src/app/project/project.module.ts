@@ -1,6 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
+import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -12,19 +11,29 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
-import { AppComponent } from './app.component';
-import { ProjectModule } from './project/project.module';
-import { DialognewComponent } from './project/dialognew/dialognew.component';
+
+
+import { RecentComponent } from './recent/recent.component';
+import { AllComponent } from './all/all.component';
+import { DialognewComponent } from './dialognew/dialognew.component';
+
+
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    
+  declarations: [RecentComponent, AllComponent, DialognewComponent],
+  entryComponents: [
+    DialognewComponent
   ],
-
   imports: [
-    BrowserModule,
-    AppRoutingModule,
+    CommonModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireStorageModule,
+    AngularFirestoreModule,
     MatInputModule,
     MatFormFieldModule,
     BrowserAnimationsModule,
@@ -38,12 +47,8 @@ import { DialognewComponent } from './project/dialognew/dialognew.component';
     FormsModule,
     ReactiveFormsModule,
 
-
-
-
-    ProjectModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  exports:[RecentComponent, AllComponent, DialognewComponent]
+
 })
-export class AppModule { }
+export class ProjectModule { }
