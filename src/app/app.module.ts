@@ -15,7 +15,8 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ProjectModule } from './project/project.module';
-import { DialognewComponent } from './project/dialognew/dialognew.component';
+import { OverviewModule } from './overview/overview.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { DialognewComponent } from './project/dialognew/dialognew.component';
     MatDialogModule,
     FormsModule,
     ReactiveFormsModule,
+    OverviewModule,
 
 
 

@@ -1,0 +1,10 @@
+<div [ngSwitch]="proyectos">
+    <div *ngSwitchCase="false">
+        <h1>empecemos creando un nuevo proyecto</h1>
+        <button mat-raised-button (click)='new()'>añadir proyecto</button>
+    </div>
+    <div *ngSwitchCase='true'>
+        <app-recent></app-recent>
+        <app-all></app-all>
+    </div>
+</div>
