@@ -1,6 +1,6 @@
 //requisito mas usado, ACREDITACION DE LA DISPONIBILIDAD HIDRICA
 export interface IDisponibilidadHidrica {
-    administradorAgua:string
+    administradorAgua:string;
     nombreSolicitante:string;
     organizacionBeneficiaria:string;
     ruc_dniSolicitante:string;
@@ -11,7 +11,10 @@ export interface IDisponibilidadHidrica {
     departamentoProyecto:string;
     provinciaProyecto:string;
     distritoProyecto:string;
-    nombreProyecto:String
+    nombreProyecto:String;
+    tipoDeUso:string;
+    fuenteDeAgua:string;
+    tipo:string;
 
 }
 //AGREGAR OTROS EQUISITOS SEGUN SEAN UTILIZADOSS

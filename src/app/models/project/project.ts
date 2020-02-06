@@ -4,7 +4,7 @@ import { IRequisitoExpediente } from './requisitoExpediente';
 export interface IProyecto {
     nombreProyecto:string;
     empresaResponsable:string;
-    requisitosPerfiles:IRequisitoPerfil[];
-    requisitosExpedientes:IRequisitoExpediente[];
+    requisitosPerfiles?:IRequisitoPerfil[];
+    requisitosExpedientes?:IRequisitoExpediente[];
 
 }

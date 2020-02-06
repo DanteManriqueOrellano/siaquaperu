@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { Component } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
 import { DialognewComponent } from '../dialognew/dialognew.component';
+
+
 export interface DialogData {
   animal: string;
   name: string;
@@ -14,15 +16,17 @@ export interface DialogData {
   templateUrl: './recent.component.html',
   styleUrls: ['./recent.component.css']
 })
-export class RecentComponent implements OnInit {
-
+export class RecentComponent  {
+  
   animal: string;
   name: string;
 
-  constructor(public dialog: MatDialog) {}
+  constructor(
+    public dialog: MatDialog,
+    
+    ) {}
 
-  ngOnInit() {
-  }
+ 
   
   new(){
     const dialogRef = this.dialog.open(DialognewComponent, {

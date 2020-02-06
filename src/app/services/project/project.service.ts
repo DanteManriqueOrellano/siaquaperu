@@ -4,13 +4,14 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { IProyecto } from 'src/app/models/project/project';
 
-interface IProyectoById extends IProyecto {
+export interface IProyectoById extends IProyecto {
   id: string;
 }
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectService {
+  
 
   private proyectoCollection: AngularFirestoreCollection<IProyecto>;
   private proyectoDocument: AngularFirestoreDocument<IProyecto>
@@ -24,13 +25,22 @@ export class ProjectService {
         map(actions => actions.map(a => {
           const data = a.payload.doc.data() as IProyecto;
           const id = a.payload.doc.id;
-          return { id, ...data };
+          
+          return { id , ...data };
         }))
       );
   }
 
   public agregarUnProyecto(data: IProyecto) {
-    this.proyectoCollection.add(data);
+    const referencia = this.proyectoCollection.ref // .add(data);
+    const identiicador = this.afs.createId()
+    referencia.doc(identiicador).set(data)
+    return identiicador
   }
+  public listaTodosProyectos(){
+    return this.proyectoCollection.valueChanges();
+  }
+  
+  
 
 }

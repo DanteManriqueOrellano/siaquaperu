@@ -21,11 +21,16 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { RecentComponent } from './recent/recent.component';
 import { AllComponent } from './all/all.component';
 import { DialognewComponent } from './dialognew/dialognew.component';
+import { ProyectoComponent } from './proyecto/proyecto.component';
+import { RequisitoperfilComponent } from './requisitoperfil/requisitoperfil.component';
+import { RequisitoexpedienteComponent } from './requisitoexpediente/requisitoexpediente.component';
+import { DisponibilidadhidricaComponent } from './requisitos/perfil/disponibilidadhidrica/disponibilidadhidrica.component';
+import { DemandaComponent } from './requisitos/expediente/demanda/demanda.component';
 
 
 
 @NgModule({
-  declarations: [RecentComponent, AllComponent, DialognewComponent],
+  declarations: [RecentComponent, AllComponent, DialognewComponent, ProyectoComponent, RequisitoperfilComponent, RequisitoexpedienteComponent, DisponibilidadhidricaComponent, DemandaComponent],
   entryComponents: [
     DialognewComponent
   ],
