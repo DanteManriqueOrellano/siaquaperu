@@ -18,7 +18,7 @@ import { OverviewRoutingModule } from './overview-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { NavComponent } from './nav/nav.component';
 import { MainComponent } from './main/main.component';
-import { OverviewComponent } from '../overview/overview.component';
+import { OverviewComponent } from './overview/overview.component';
 import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({

@@ -3,8 +3,8 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay, mergeMap } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
-import { ProjectService } from '../services/project/project.service';
-import { IProyecto } from '../models/project/project';
+import { ProjectService } from '../../services/project/project.service';
+import { IProyecto } from '../../models/project/project';
 
 
 @Component({
