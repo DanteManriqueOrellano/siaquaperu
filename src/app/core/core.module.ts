@@ -13,6 +13,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { ConsultaproyectosModule } from '../consultaproyectos/consultaproyectos.module';
+import { PerfilModule } from '../perfil/perfil.module';
+import { ExptecnicoModule } from '../exptecnico/exptecnico.module';
 
 
 
@@ -20,7 +22,7 @@ import { ConsultaproyectosModule } from '../consultaproyectos/consultaproyectos.
   declarations: [ShellComponent],
   imports: [
     CommonModule,    
-    CoreRoutingModule, NingunproyectoModule, OverviewModule, LayoutModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, ConsultaproyectosModule,
+    CoreRoutingModule, NingunproyectoModule, OverviewModule, LayoutModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, ConsultaproyectosModule, PerfilModule, ExptecnicoModule,
   ],
   exports:[ShellComponent]
 })

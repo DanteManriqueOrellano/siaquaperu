@@ -20,9 +20,10 @@ import { NavComponent } from './nav/nav.component';
 import { MainComponent } from './main/main.component';
 import { OverviewComponent } from './overview/overview.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { ConfignuevoproyectoComponent } from './confignuevoproyecto/confignuevoproyecto.component';
 
 @NgModule({
-  declarations: [HeaderComponent, NavComponent, MainComponent,OverviewComponent],
+  declarations: [HeaderComponent, NavComponent, MainComponent,OverviewComponent, ConfignuevoproyectoComponent],
   imports: [
     CommonModule,
     FormsModule, ReactiveFormsModule,
