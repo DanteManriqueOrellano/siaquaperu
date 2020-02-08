@@ -28,6 +28,9 @@ export class GeneraproyectoComponent extends NgxSubFormComponent<IProyecto>  {
       
     }
   }
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 
   
 

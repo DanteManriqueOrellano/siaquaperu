@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
- // {path:'project',loadChildren:()=>{return import('src/app/uno/uno.module').then(m=>m.UnoModule)} }
+  {path:'',loadChildren:()=>{return import('../ningunproyecto/ningunproyecto.module').then(m=>m.NingunproyectoModule)} }
 ];
 
 @NgModule({

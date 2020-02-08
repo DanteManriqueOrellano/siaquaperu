@@ -40,6 +40,11 @@ export class ProjectService {
   public listaTodosProyectos(){
     return this.proyectoCollection.valueChanges();
   }
+  public unProyectoPorId(id:string){
+    return this.proyectoCollection.doc(id).valueChanges()
+     
+    
+  }
   
   
 

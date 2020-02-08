@@ -19,7 +19,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>agua desague pucap</span>
+      <span [hidden]=hide>{{proyecto.nombreProyecto}}</span>
     </mat-toolbar>
     <!-- Add Content Here -->
     <ng-container>

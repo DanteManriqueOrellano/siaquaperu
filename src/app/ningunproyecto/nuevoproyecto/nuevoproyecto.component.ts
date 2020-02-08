@@ -34,8 +34,9 @@ export class NuevoproyectoComponent  {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      const id = this.apiService.agregarUnProyecto(result) 
-      //this.router.navigate([id,'overview'])
+      if(result == undefined) return null //garantiza que si se cancela se termine el proceso.
+      const id = this.apiService.agregarUnProyecto(result)
+      this.router.navigate(['project',id,'overview'])
     });
   }
 

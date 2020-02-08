@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { OverviewComponent } from './overview.component';
+import { ProjectService } from '../services/project/project.service';
 
 
 const routes: Routes = [
-  {path:'overview',component:OverviewComponent}
+  {path:'project/:id/overview',component:OverviewComponent}
 ];
 
 @NgModule({
