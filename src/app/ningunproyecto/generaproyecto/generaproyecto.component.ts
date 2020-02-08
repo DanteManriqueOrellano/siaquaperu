@@ -25,6 +25,9 @@ export class GeneraproyectoComponent extends NgxSubFormComponent<IProyecto>  {
       localidad: new FormControl(),
       requisitosExpedientes: new FormControl(),
       requisitosPerfiles: new FormControl(),
+      alias:new FormControl(),
+      cliente:new FormControl(),
+      estado:new FormControl(),
       
     }
   }
