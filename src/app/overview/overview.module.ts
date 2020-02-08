@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import {FormsModule,ReactiveFormsModule} from '@angular/forms'
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
@@ -9,16 +10,19 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
-import {MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dialog';
+import {MatDialogModule} from '@angular/material/dialog';
 import {MatListModule} from '@angular/material/list';
 
 
-import { NingunproyectoRoutingModule } from './ningunproyecto-routing.module';
-import { NuevoproyectoComponent } from './nuevoproyecto/nuevoproyecto.component';
-import { GeneraproyectoComponent } from './generaproyecto/generaproyecto.component';
+import { OverviewRoutingModule } from './overview-routing.module';
+import { HeaderComponent } from './header/header.component';
+import { NavComponent } from './nav/nav.component';
+import { MainComponent } from './main/main.component';
+import { OverviewComponent } from '../overview/overview.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
-  declarations: [NuevoproyectoComponent, GeneraproyectoComponent],
+  declarations: [HeaderComponent, NavComponent, MainComponent,OverviewComponent],
   imports: [
     CommonModule,
     FormsModule, ReactiveFormsModule,
@@ -32,12 +36,10 @@ import { GeneraproyectoComponent } from './generaproyecto/generaproyecto.compone
     MatIconModule,
     MatDialogModule,
     MatListModule,
-
-    NingunproyectoRoutingModule
-  ],
-  entryComponents: [
-    GeneraproyectoComponent
-  ],
-  providers:[{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: true}}]
+    
+    OverviewRoutingModule,
+    
+    LayoutModule
+  ]
 })
-export class NingunproyectoModule { }
+export class OverviewModule { }
