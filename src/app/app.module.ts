@@ -14,8 +14,15 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { ProjectModule } from './project/project.module';
-import { OverviewModule } from './overview/overview.module';
+import { RouterModule } from '@angular/router';
+import { CoreModule } from './core/core.module';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from 'src/environments/environment';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -25,27 +32,17 @@ import { OverviewModule } from './overview/overview.module';
 
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    MatInputModule,
-    MatFormFieldModule,
-    BrowserAnimationsModule,
     LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatDialogModule,
-    FormsModule,
-    ReactiveFormsModule,
-    OverviewModule,
+    BrowserAnimationsModule,
+    CoreModule, 
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
 
-
-
-
-    ProjectModule
+    
   ],
   providers: [],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
