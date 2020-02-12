@@ -17,7 +17,12 @@ import { PerfilRoutingModule } from './perfil-routing.module';
 import { ConfigperfilComponent } from './configperfil/configperfil.component';
 import { CiraComponent } from './cira/cira.component';
 import { RelacionadoComponent } from './relacionado/relacionado.component';
-
+// Import pdfmake-wrapper and the fonts to use
+import { PdfMakeWrapper } from 'pdfmake-wrapper';
+import pdfFonts from "pdfmake/build/vfs_fonts"; // fonts provided for pdfmake
+ 
+// Set the fonts to use
+PdfMakeWrapper.setFonts(pdfFonts);
 
 @NgModule({
   declarations: [ConfigperfilComponent, CiraComponent, RelacionadoComponent],
