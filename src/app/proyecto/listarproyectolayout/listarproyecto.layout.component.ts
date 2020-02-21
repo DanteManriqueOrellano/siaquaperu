@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-listarproyecto',
-  templateUrl: './listarproyecto.component.html',
-  styleUrls: ['./listarproyecto.component.css']
+  templateUrl: './listarproyecto.layout.component.html',
+  styleUrls: ['./listarproyecto.layout.component.css']
 })
 export class ListarproyectoComponent implements OnInit {
 
