@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ProyectoComponent } from './proyectocontainer/proyecto.component';
+import { ProyectoComponent } from './proyectocontainer/proyectocontainer.component';
 import { ProyectoresolverService } from '../servicios/proyectoresolver.service';
-import { NuevoproyectoComponent } from './addproyectolayout/nuevoproyecto/nuevoproyecto.component';
+import { NuevoproyectoComponent } from './proyectocontainer/addproyectolayout/nuevoproyecto/nuevoproyecto.component';
 
 
 const routes: Routes = [
