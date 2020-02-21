@@ -3,8 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-proyecto',
-  templateUrl: './proyecto.component.html',
-  styleUrls: ['./proyecto.component.css']
+  templateUrl: './proyectocontainer.component.html',
+  styleUrls: ['./proyectocontainer.component.css']
 })
 export class ProyectoComponent implements OnInit {
   listaProyectos = []
