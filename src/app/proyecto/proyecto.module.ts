@@ -31,12 +31,19 @@ import { MantenimientosComponent } from './proyectocontainer/mantenimientos/mant
 import { MantenimientoComponent } from './proyectocontainer/mantenimiento/mantenimiento.component';
 import { ManterialesutilizadosComponent } from './proyectocontainer/manterialesutilizados/manterialesutilizados.component';
 import { DimencionesComponent } from './proyectocontainer/dimenciones/dimenciones.component';
+import { UbicacionproyectoComponent } from './proyectocontainer/ubicacionproyecto/ubicacionproyecto.component';
+import { ResponsableComponent } from './proyectocontainer/responsable/responsable.component';
+import { ViaaccesoComponent } from './proyectocontainer/viaacceso/viaacceso.component';
+import { CoordenadaComponent } from './proyectocontainer/coordenada/coordenada.component';
+import { LimiteprovinciaComponent } from './proyectocontainer/limiteprovincia/limiteprovincia.component';
+import { ObjetivomuniComponent } from './proyectocontainer/objetivomuni/objetivomuni.component';
+import { ObjetivoproyComponent } from './proyectocontainer/objetivoproy/objetivoproy.component';
 
 
 
 
 @NgModule({
-  declarations: [ProyectoComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, GeneralidadesComponent, AutoridadesComponent, UbicacionComponent, LimitesComponent, LocalidadesComponent, CentroeducativoComponent, HistoricoaguaComponent, CaptacionComponent, MantenimientosComponent, MantenimientoComponent, ManterialesutilizadosComponent, DimencionesComponent],
+  declarations: [ProyectoComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, GeneralidadesComponent, AutoridadesComponent, UbicacionComponent, LimitesComponent, LocalidadesComponent, CentroeducativoComponent, HistoricoaguaComponent, CaptacionComponent, MantenimientosComponent, MantenimientoComponent, ManterialesutilizadosComponent, DimencionesComponent, UbicacionproyectoComponent, ResponsableComponent, ViaaccesoComponent, CoordenadaComponent, LimiteprovinciaComponent, ObjetivomuniComponent, ObjetivoproyComponent],
   imports: [
     CommonModule,
     ProyectoRoutingModule,
