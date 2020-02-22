@@ -1,5 +1,5 @@
 import { IResponsable } from './responsable';
-import { IUbicacion } from './ubicacion';
+import { IUbicacionproyecto } from './ubicacionproyecto';
 import { ILimiteProvincia } from './limiteprovincia';
 import { ILocalidad } from './localidad';
 import { IFoto } from './foto';
@@ -17,7 +17,7 @@ export interface IProyecto {
     nroInformeTecnico:string;
     aprobacionPerfil:string;
     responsable:IResponsable;
-    ubicacion:IUbicacion;
+    ubicacionproyecto:IUbicacionproyecto;
     limiteProvincia:ILimiteProvincia;
     localidades:ILocalidad[];
     fotos:IFoto[];//ubicacion del proyecto en peru y ubicacion del proyecto en la region

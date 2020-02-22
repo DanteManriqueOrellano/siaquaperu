@@ -1,0 +1,23 @@
+<section [formGroup]='formGroup'>
+    <mat-form-field>
+        <input matInput [formControlName]='formControlNames.nombreLocalidad' placeholder="Nombre Localidad" type="text" autocomplete="off">
+    </mat-form-field>
+
+    <div [formArrayName]="formControlNames.centrosEducativos"
+        *ngFor="let uncentroEducativo of formGroupControls.centrosEducativos.controls; let i = index">
+        <app-centroeducativo [formControl]="uncentroEducativo"></app-centroeducativo>
+    
+        <button mat-mini-fab color="primary" (click)="eliminaCentroEducativo(i)" [disabled]="formGroup.disabled">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </div>
+    <button mat-raised-button color="primary" (click)="agregaCentroEducativo()" [disabled]="formGroup.disabled">
+        Agrega un Centro Educativo
+    </button>    
+    <mat-form-field>
+        <input matInput [formControlName]='formControlNames.viviendasBeneficiadas' placeholder="viviendasBeneficiadas" type="text" autocomplete="off">
+    </mat-form-field>
+    <input type="file" [formControlName]='formControlNames.fotos'>
+ 
+    <app-sistemaagua [formControlName]="formControlNames.sistemaAgua" ></app-sistemaagua>
+</section>

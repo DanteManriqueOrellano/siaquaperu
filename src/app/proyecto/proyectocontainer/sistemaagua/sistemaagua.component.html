@@ -1,0 +1,20 @@
+<section [formGroup]='formGroup'>
+    <fieldset>
+        <legend>Sistema de Agua</legend>
+        <div [formArrayName]="formControlNames.intervenciones"
+        *ngFor="let unaIntervencion of formGroupControls.intervenciones.controls; let i = index">
+        <app-intervencion [formControl]="unaIntervencion"></app-intervencion>
+    
+        <button mat-mini-fab color="primary" (click)="eliminaIntervencion(i)" [disabled]="formGroup.disabled">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </div>
+    <button mat-raised-button color="primary" (click)="agregaIntervencion()" [disabled]="formGroup.disabled">
+        Agrega una Intervención
+    </button>
+
+        
+    
+    </fieldset>
+
+</section>

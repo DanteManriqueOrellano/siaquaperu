@@ -1,5 +1,54 @@
-<app-generalidades></app-generalidades>
-<app-autoridades></app-autoridades>
-<app-ubicacionproyecto></app-ubicacionproyecto>
-<app-limiteprovincia></app-limiteprovincia>
-<app-localidades></app-localidades>
+<section [formGroup]='formGroup'>
+    <fieldset>
+        <legend>Generalidades:</legend>
+        <mat-form-field>
+            <input matInput type="text" [formControlName]='formControlNames.nombreProyecto' placeholder="Nombre Proyecto" autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Fecha Aprovación</mat-label>
+            <input matInput type="text" [formControlName]='formControlNames.fechaAprobacion' [matDatepicker]="picker" autocomplete="off">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" [formControlName]='formControlNames.snip' placeholder="SNIP" autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" [formControlName]='formControlNames.cliente' placeholder="Cliente" autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" [formControlName]='formControlNames.nroInformeTecnico' placeholder="Informe Técnico Nº" autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text"  [formControlName]='formControlNames.anioPriorizacion' placeholder="Año de Priorización" autocomplete="off">
+        </mat-form-field>
+    
+    </fieldset>
+    <app-responsable [formControlName]='formControlNames.responsable'></app-responsable>
+    <mat-form-field>
+        <input matInput type="text"  [formControlName]='formControlNames.anioPriorizacion' placeholder="Aprovación del Perfil" autocomplete="off">
+    </mat-form-field>
+    <app-ubicacionproyecto [formControlName]='formControlNames.ubicacionproyecto'></app-ubicacionproyecto>
+    <app-limiteprovincia [formControlName]='formControlNames.limiteProvincia'></app-limiteprovincia>
+
+
+
+    <div [formArrayName]="formControlNames.localidades"
+        *ngFor="let unaLocalidad of formGroupControls.localidades.controls; let i = index">
+        <app-localidades [formControl]="unaLocalidad"></app-localidades>
+    
+        <button mat-mini-fab color="primary" (click)="eliminaLocalidad(i)" [disabled]="formGroup.disabled">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </div>
+    <button mat-raised-button color="primary" (click)="agregaLocalidad()" [disabled]="formGroup.disabled">
+        Agrega UNA Localidad
+    </button>
+    
+
+
+
+    
+
+
+</section>

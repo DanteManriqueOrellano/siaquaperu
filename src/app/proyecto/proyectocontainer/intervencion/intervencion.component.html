@@ -1,0 +1,10 @@
+<section [formGroup]='formGroup'>
+    <mat-form-field>
+        <input matInput [formControlName]='formControlNames.anio' placeholder="Año de Intervencion" type="text" autocomplete="off">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput [formControlName]='formControlNames.ejecutor' placeholder="Ejecutor" type="text" autocomplete="off">
+    </mat-form-field>
+    <app-captacion></app-captacion>
+
+</section>

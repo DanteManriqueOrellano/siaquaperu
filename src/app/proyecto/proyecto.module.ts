@@ -21,7 +21,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
 import { AutoridadesComponent } from './proyectocontainer/autoridades/autoridades.component';
-
+import {MatIconModule} from '@angular/material/icon';
 
 import { LocalidadesComponent } from './proyectocontainer/localidades/localidades.component';
 import { CentroeducativoComponent } from './proyectocontainer/centroeducativo/centroeducativo.component';
@@ -38,12 +38,15 @@ import { CoordenadaComponent } from './proyectocontainer/coordenada/coordenada.c
 import { LimiteprovinciaComponent } from './proyectocontainer/limiteprovincia/limiteprovincia.component';
 import { ObjetivomuniComponent } from './proyectocontainer/objetivomuni/objetivomuni.component';
 import { ObjetivoproyComponent } from './proyectocontainer/objetivoproy/objetivoproy.component';
+import { LocalidadComponent } from './proyectocontainer/localidad/localidad.component';
+import { SistemaaguaComponent } from './proyectocontainer/sistemaagua/sistemaagua.component';
+import { IntervencionComponent } from './proyectocontainer/intervencion/intervencion.component';
 
 
 
 
 @NgModule({
-  declarations: [ProyectoComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, GeneralidadesComponent, AutoridadesComponent, LocalidadesComponent, CentroeducativoComponent, HistoricoaguaComponent, CaptacionComponent, MantenimientosComponent, MantenimientoComponent, ManterialesutilizadosComponent, DimencionesComponent, UbicacionproyectoComponent, ResponsableComponent, ViaaccesoComponent, CoordenadaComponent, LimiteprovinciaComponent, ObjetivomuniComponent, ObjetivoproyComponent],
+  declarations: [ProyectoComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, GeneralidadesComponent, AutoridadesComponent, LocalidadesComponent, CentroeducativoComponent, HistoricoaguaComponent, CaptacionComponent, MantenimientosComponent, MantenimientoComponent, ManterialesutilizadosComponent, DimencionesComponent, UbicacionproyectoComponent, ResponsableComponent, ViaaccesoComponent, CoordenadaComponent, LimiteprovinciaComponent, ObjetivomuniComponent, ObjetivoproyComponent, LocalidadComponent, SistemaaguaComponent, IntervencionComponent],
   imports: [
     CommonModule,
     ProyectoRoutingModule,
@@ -60,6 +63,7 @@ import { ObjetivoproyComponent } from './proyectocontainer/objetivoproy/objetivo
     MatStepperModule,
     MatCardModule,
     MatCheckboxModule,
+    MatIconModule,
 
   ],
   providers:[
