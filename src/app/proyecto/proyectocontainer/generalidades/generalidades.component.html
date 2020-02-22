@@ -1,1 +1,28 @@
-<p>generalidades works!</p>
+<fieldset>
+    <legend>Generalidades:</legend>
+    <mat-form-field>
+        <input matInput placeholder="Nombre Proyecto" autocomplete="off">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Fecha Aprovación</mat-label>
+        <input matInput [matDatepicker]="picker" autocomplete="off">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="SNIP" autocomplete="off">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Cliente" autocomplete="off">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Informe Técnico Nº" autocomplete="off">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Fecha Priorización</mat-label>
+        <input matInput [matDatepicker]="picker1" autocomplete="off">
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+
+</fieldset>
