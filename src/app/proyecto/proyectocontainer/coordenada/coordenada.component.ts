@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgxSubFormComponent,subformComponentProviders, Controls } from 'ngx-sub-form';
 import { ICoordenada } from 'src/app/core/models/coordenada';
 import { FormControl } from '@angular/forms';

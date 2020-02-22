@@ -1,15 +1,18 @@
-<fieldset>
-    <legend>Responsables de las Unidades:</legend>
+<section [formGroup]='formGroup'>
+    <fieldset>
+        <legend>Responsables de las Unidades:</legend>
+    
+        <mat-form-field>
+            <input matInput [formControlName]='formControlNames.formuladora' placeholder="Formuladora" type="text" autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [formControlName]='formControlNames.ejecutora' placeholder="Ejecutora" type="text" autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [formControlName]='formControlNames.evaluadora' placeholder="Evaluadora" type="text" autocomplete="off">
+        </mat-form-field>
+    
+    
+    </fieldset>
 
-    <mat-form-field>
-        <input matInput placeholder="Formuladora" type="text" autocomplete="off">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Ejecutora" type="text" autocomplete="off">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Evaluadora" type="text" autocomplete="off">
-    </mat-form-field>
-
-
-</fieldset>
+</section>

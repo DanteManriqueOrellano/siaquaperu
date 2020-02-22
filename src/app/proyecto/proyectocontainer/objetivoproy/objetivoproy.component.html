@@ -1,7 +1,11 @@
-<fieldset>
-    <legend>Objetivos del Proyecto</legend>
-    <mat-form-field>
-        <input matInput placeholder="Objetivo" autocomplete="off">
-    </mat-form-field>
-    
-</fieldset>
+<section [formGroup]='formGroup'>
+
+    <fieldset>
+        <legend>Objetivos del Proyecto</legend>
+        <mat-form-field>
+            <input matInput [formControlName]='formControlNames.objetivo' placeholder="Objetivo" autocomplete="off">
+        </mat-form-field>
+
+    </fieldset>
+
+</section>

@@ -1,16 +1,19 @@
-<fieldset>
-    <legend>Vias de Acceso:</legend>
-    <mat-form-field>
-        <input matInput placeholder="Nombre Lugar" type="text" autocomplete="off">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Tipo de Vía" type="text" autocomplete="off">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Distancia (Km)" type="text" autocomplete="off">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Tiempo (min)" type="text" autocomplete="off">
-    </mat-form-field>
-    
-</fieldset>
+<section [formGroup]='formGroup'>
+    <fieldset>
+        <legend>Vias de Acceso:</legend>
+        <mat-form-field>
+            <input matInput [formControlName]='formControlNames.nombreLugar' placeholder="Nombre Lugar" type="text" autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [formControlName]='formControlNames.tipoVia' placeholder="Tipo de Vía" type="text" autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [formControlName]='formControlNames.distancia' placeholder="Distancia (Km)" type="text" autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [formControlName]='formControlNames.tiempo' placeholder="Tiempo (min)" type="text" autocomplete="off">
+        </mat-form-field>
+        
+    </fieldset>
+
+</section>

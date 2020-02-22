@@ -1,9 +1,13 @@
-<fieldset>
-    <legend>Objetivos de la Municipalidad</legend>
-    <mat-form-field>
-        <input matInput placeholder="Problema" autocomplete="off">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Solucion" autocomplete="off">
-    </mat-form-field>
-</fieldset>
+<section [formGroup]='formGroup'>
+
+    <fieldset>
+        <legend>Objetivos de la Municipalidad</legend>
+        <mat-form-field>
+            <input matInput [formControlName]='formControlNames.problema' placeholder="Problema" autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [formControlName]='formControlNames.solucion' placeholder="Solucion" autocomplete="off">
+        </mat-form-field>
+    </fieldset>
+
+</section>

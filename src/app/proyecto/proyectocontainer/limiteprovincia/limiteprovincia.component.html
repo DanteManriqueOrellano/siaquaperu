@@ -1,15 +1,19 @@
-<fieldset>
+<section [formGroup]='formGroup'>
+
+  <fieldset>
     <legend>Limites de la Provincia:</legend>
     <mat-form-field>
-      <input matInput type="text" placeholder="Este" autocomplete="off">
+      <input matInput [formControlName]='formControlNames.este' type="text" placeholder="Este" autocomplete="off">
     </mat-form-field>
     <mat-form-field>
-      <input matInput type="text" placeholder="Oeste" autocomplete="off">
+      <input matInput [formControlName]='formControlNames.oeste' type="text" placeholder="Oeste" autocomplete="off">
     </mat-form-field>
     <mat-form-field>
-      <input matInput type="text" placeholder="Norte" autocomplete="off">
+      <input matInput [formControlName]='formControlNames.norte' type="text" placeholder="Norte" autocomplete="off">
     </mat-form-field>
     <mat-form-field>
-        <input matInput type="text" placeholder="Sur" autocomplete="off">
-      </mat-form-field>
+      <input matInput [formControlName]='formControlNames.sur' type="text" placeholder="Sur" autocomplete="off">
+    </mat-form-field>
   </fieldset>
+
+</section>

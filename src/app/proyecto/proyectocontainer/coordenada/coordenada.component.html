@@ -1,13 +1,17 @@
-<fieldset>
-    <legend>Coordenadas:</legend>
-    <mat-form-field>
-        <input matInput placeholder="Norte" type="text" autocomplete="off">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Este" type="text" autocomplete="off">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Latitud" type="text" autocomplete="off">
-    </mat-form-field>
-</fieldset>
+<section [formGroup]='formGroup'>
+    <fieldset>
+        <legend>Coordenadas:</legend>
+        <mat-form-field>
+            <input matInput [formControlName]='formControlNames.norte' placeholder="Norte" type="text" autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [formControlName]='formControlNames.este' placeholder="Este" type="text" autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [formControlName]='formControlNames.latitud' placeholder="Latitud" type="text" autocomplete="off">
+        </mat-form-field>
+    </fieldset>
+    
+    
 
+</section>

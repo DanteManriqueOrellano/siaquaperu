@@ -21,8 +21,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
 import { AutoridadesComponent } from './proyectocontainer/autoridades/autoridades.component';
-import { UbicacionComponent } from './proyectocontainer/ubicacion/ubicacion.component';
-import { LimitesComponent } from './proyectocontainer/limites/limites.component';
+
+
 import { LocalidadesComponent } from './proyectocontainer/localidades/localidades.component';
 import { CentroeducativoComponent } from './proyectocontainer/centroeducativo/centroeducativo.component';
 import { HistoricoaguaComponent } from './proyectocontainer/historicoagua/historicoagua.component';
@@ -43,7 +43,7 @@ import { ObjetivoproyComponent } from './proyectocontainer/objetivoproy/objetivo
 
 
 @NgModule({
-  declarations: [ProyectoComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, GeneralidadesComponent, AutoridadesComponent, UbicacionComponent, LimitesComponent, LocalidadesComponent, CentroeducativoComponent, HistoricoaguaComponent, CaptacionComponent, MantenimientosComponent, MantenimientoComponent, ManterialesutilizadosComponent, DimencionesComponent, UbicacionproyectoComponent, ResponsableComponent, ViaaccesoComponent, CoordenadaComponent, LimiteprovinciaComponent, ObjetivomuniComponent, ObjetivoproyComponent],
+  declarations: [ProyectoComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, GeneralidadesComponent, AutoridadesComponent, LocalidadesComponent, CentroeducativoComponent, HistoricoaguaComponent, CaptacionComponent, MantenimientosComponent, MantenimientoComponent, ManterialesutilizadosComponent, DimencionesComponent, UbicacionproyectoComponent, ResponsableComponent, ViaaccesoComponent, CoordenadaComponent, LimiteprovinciaComponent, ObjetivomuniComponent, ObjetivoproyComponent],
   imports: [
     CommonModule,
     ProyectoRoutingModule,
