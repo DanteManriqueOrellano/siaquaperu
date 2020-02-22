@@ -27,12 +27,16 @@ import { LocalidadesComponent } from './proyectocontainer/localidades/localidade
 import { CentroeducativoComponent } from './proyectocontainer/centroeducativo/centroeducativo.component';
 import { HistoricoaguaComponent } from './proyectocontainer/historicoagua/historicoagua.component';
 import { CaptacionComponent } from './proyectocontainer/captacion/captacion.component';
+import { MantenimientosComponent } from './proyectocontainer/mantenimientos/mantenimientos.component';
+import { MantenimientoComponent } from './proyectocontainer/mantenimiento/mantenimiento.component';
+import { ManterialesutilizadosComponent } from './proyectocontainer/manterialesutilizados/manterialesutilizados.component';
+import { DimencionesComponent } from './proyectocontainer/dimenciones/dimenciones.component';
 
 
 
 
 @NgModule({
-  declarations: [ProyectoComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, GeneralidadesComponent, AutoridadesComponent, UbicacionComponent, LimitesComponent, LocalidadesComponent, CentroeducativoComponent, HistoricoaguaComponent, CaptacionComponent],
+  declarations: [ProyectoComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, GeneralidadesComponent, AutoridadesComponent, UbicacionComponent, LimitesComponent, LocalidadesComponent, CentroeducativoComponent, HistoricoaguaComponent, CaptacionComponent, MantenimientosComponent, MantenimientoComponent, ManterialesutilizadosComponent, DimencionesComponent],
   imports: [
     CommonModule,
     ProyectoRoutingModule,
