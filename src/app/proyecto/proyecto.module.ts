@@ -7,7 +7,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { ProyectoRoutingModule } from './proyecto-routing.module';
-import { ProyectoComponent } from './proyectocontainer/proyectocontainer.component';
+import { ProyectoContainerComponent } from './proyectocontainer/proyectocontainer.component';
 
 import { ListarproyectoComponent } from './proyectocontainer/listarproyectolayout/listarproyecto.layout.component';
 
@@ -49,7 +49,7 @@ import { FotoComponent } from './proyectocontainer/foto/foto.component';
 
 
 @NgModule({
-  declarations: [ProyectoComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, CentroeducativoComponent, CaptacionComponent, MantenimientoComponent, UbicacionproyectoComponent, ResponsableComponent, ViaaccesoComponent, CoordenadaComponent, LimiteprovinciaComponent, ObjetivomuniComponent, ObjetivoproyComponent, LocalidadComponent, SistemaaguaComponent, IntervencionComponent, DimensionComponent, FotoComponent],
+  declarations: [ProyectoContainerComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, CentroeducativoComponent, CaptacionComponent, MantenimientoComponent, UbicacionproyectoComponent, ResponsableComponent, ViaaccesoComponent, CoordenadaComponent, LimiteprovinciaComponent, ObjetivomuniComponent, ObjetivoproyComponent, LocalidadComponent, SistemaaguaComponent, IntervencionComponent, DimensionComponent, FotoComponent],
   imports: [
     CommonModule,
     ProyectoRoutingModule,
