@@ -1,28 +1,47 @@
 <section [formGroup]='formGroup'>
     <fieldset>
         <legend>Captación:</legend>
+        
         <mat-form-field>
-            <input matInput placeholder="Año" autocomplete="off">
+            <input [formControlName]='formControlNames.nombreCaptacion' matInput placeholder="Nombre Captación"
+                autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input [formControlName]='formControlNames.aforo' matInput placeholder="Aforo" autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input [formControlName]='formControlNames.tipoCaptacion' matInput placeholder="Tipo de Captación"
+                autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input [formControlName]='formControlNames.antiguedad' matInput placeholder="Antiguedad" autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input [formControlName]='formControlNames.materialUtilizado' matInput placeholder="Material Utilizado"
+                autocomplete="off">
         </mat-form-field>
 
-        <mat-form-field>
-            <input matInput placeholder="Nombre Captación" autocomplete="off">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Aforo" autocomplete="off">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Tipo de Captación" autocomplete="off">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Antiguedad" autocomplete="off">
-        </mat-form-field>
+        <mat-checkbox [formControlName]='formControlNames.fugaAgua'>Fuga de Agua</mat-checkbox>
+        <mat-checkbox [formControlName]='formControlNames.operativo'>Operativo</mat-checkbox>
+        <mat-checkbox [formControlName]='formControlNames.funcionamiento'>Funcionamiento</mat-checkbox>
+        
+        <div [formArrayName]="formControlName.mantenimientos" *ngFor="let unMantenimiento of formGroupControls.mantenimientos.controls; let i=index">
+            <app-mantenimiento [formControl]="unMantenimiento"></app-mantenimiento>
+        </div>
+        <button mat-raised-button color="primary" (click)="agregarMantenimiento()" [disabled]="formGroup.disabled">
+            Agregar Fotos de Captación
+        </button>
+        
 
-        <mat-checkbox>Fuga de Agua</mat-checkbox>
-        <mat-checkbox>Operativo</mat-checkbox>
-        <app-mantenimientos></app-mantenimientos>
-        <app-manterialesutilizados></app-manterialesutilizados>
-        <app-dimenciones [formControlName]='formControlNames.dimension'></app-dimenciones>
+        <app-dimencion [formControlName]='formControlNames.dimension'></app-dimencion>
+        
+        <div [formArrayName]='formControlNames.fotos'
+            *ngFor="let unaFoto of formGroupControls.fotos.controls;let i=index">
+            <app-foto [formControl]='unaFoto'></app-foto>
+        </div>
+        <button mat-raised-button color="primary" (click)="agregarFoto()" [disabled]="formGroup.disabled">
+            Agregar Fotos de Captación
+        </button>
     </fieldset>
 
 

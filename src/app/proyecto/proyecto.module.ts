@@ -12,7 +12,7 @@ import { ProyectoComponent } from './proyectocontainer/proyectocontainer.compone
 import { ListarproyectoComponent } from './proyectocontainer/listarproyectolayout/listarproyecto.layout.component';
 
 import { AddproyectoComponent } from './proyectocontainer/addproyectolayout/addproyecto.layout.component';
-import { GeneralidadesComponent } from './proyectocontainer/generalidades/generalidades.component';
+
 import { NuevoproyectoComponent } from './proyectocontainer/nuevoproyecto/nuevoproyecto.component';
 import {  MatFormFieldModule } from '@angular/material/form-field';
 import {  MatInputModule } from '@angular/material/input';
@@ -20,17 +20,17 @@ import {  MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
-import { AutoridadesComponent } from './proyectocontainer/autoridades/autoridades.component';
+
 import {MatIconModule} from '@angular/material/icon';
 
-import { LocalidadesComponent } from './proyectocontainer/localidades/localidades.component';
+
 import { CentroeducativoComponent } from './proyectocontainer/centroeducativo/centroeducativo.component';
-import { HistoricoaguaComponent } from './proyectocontainer/historicoagua/historicoagua.component';
+
 import { CaptacionComponent } from './proyectocontainer/captacion/captacion.component';
-import { MantenimientosComponent } from './proyectocontainer/mantenimientos/mantenimientos.component';
+
 import { MantenimientoComponent } from './proyectocontainer/mantenimiento/mantenimiento.component';
-import { ManterialesutilizadosComponent } from './proyectocontainer/manterialesutilizados/manterialesutilizados.component';
-import { DimencionesComponent } from './proyectocontainer/dimenciones/dimenciones.component';
+
+
 import { UbicacionproyectoComponent } from './proyectocontainer/ubicacionproyecto/ubicacionproyecto.component';
 import { ResponsableComponent } from './proyectocontainer/responsable/responsable.component';
 import { ViaaccesoComponent } from './proyectocontainer/viaacceso/viaacceso.component';
@@ -41,12 +41,15 @@ import { ObjetivoproyComponent } from './proyectocontainer/objetivoproy/objetivo
 import { LocalidadComponent } from './proyectocontainer/localidad/localidad.component';
 import { SistemaaguaComponent } from './proyectocontainer/sistemaagua/sistemaagua.component';
 import { IntervencionComponent } from './proyectocontainer/intervencion/intervencion.component';
+import { DimensionComponent } from './proyectocontainer/dimension/dimension.component';
+import { FotoComponent } from './proyectocontainer/foto/foto.component';
+
 
 
 
 
 @NgModule({
-  declarations: [ProyectoComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, GeneralidadesComponent, AutoridadesComponent, LocalidadesComponent, CentroeducativoComponent, HistoricoaguaComponent, CaptacionComponent, MantenimientosComponent, MantenimientoComponent, ManterialesutilizadosComponent, DimencionesComponent, UbicacionproyectoComponent, ResponsableComponent, ViaaccesoComponent, CoordenadaComponent, LimiteprovinciaComponent, ObjetivomuniComponent, ObjetivoproyComponent, LocalidadComponent, SistemaaguaComponent, IntervencionComponent],
+  declarations: [ProyectoComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, CentroeducativoComponent, CaptacionComponent, MantenimientoComponent, UbicacionproyectoComponent, ResponsableComponent, ViaaccesoComponent, CoordenadaComponent, LimiteprovinciaComponent, ObjetivomuniComponent, ObjetivoproyComponent, LocalidadComponent, SistemaaguaComponent, IntervencionComponent, DimensionComponent, FotoComponent],
   imports: [
     CommonModule,
     ProyectoRoutingModule,
