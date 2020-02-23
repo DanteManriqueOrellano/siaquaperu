@@ -21,6 +21,7 @@ export class NuevoproyectoComponent extends NgxSubFormRemapComponent<[ILocalidad
     return {
       nombreProyecto: new FormControl(),
       cliente: new FormControl(),
+      aliasProyecto:new FormControl(),
       snip: new FormControl(),
       anioPriorizacion: new FormControl(),
       fechaAprobacion: new FormControl(),
@@ -50,6 +51,7 @@ export class NuevoproyectoComponent extends NgxSubFormRemapComponent<[ILocalidad
       localidades: !obj[0] ? [] : obj[0],
       viasAcceso: !obj[1] ? [] : obj[1],
       nombreProyecto:'',
+      aliasProyecto:'',
       cliente: '',
       snip: '',
       anioPriorizacion: '',
@@ -104,6 +106,10 @@ export class NuevoproyectoComponent extends NgxSubFormRemapComponent<[ILocalidad
   }
   eliminaViaAcceso(){
 
+  }
+  guardarProyecto(){
+    const proyecto = this.formGroupValues
+    console.log(proyecto)
   }
 
   

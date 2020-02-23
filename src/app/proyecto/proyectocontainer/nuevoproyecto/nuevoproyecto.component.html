@@ -22,6 +22,10 @@
         <mat-form-field>
             <input matInput type="text"  [formControlName]='formControlNames.anioPriorizacion' placeholder="Año de Priorización" autocomplete="off">
         </mat-form-field>
+
+        <mat-form-field>
+            <input matInput type="text"  [formControlName]='formControlNames.aliasProyecto' placeholder="alias del Proyecto" autocomplete="off">
+        </mat-form-field>
     
     </fieldset>
     <app-responsable [formControlName]='formControlNames.responsable'></app-responsable>
@@ -57,6 +61,7 @@
         Agrega una Via de Acceso
     </button>
     
+    <button (click)=guardarProyecto()>Configurar Proyecto</button>
 
 
 

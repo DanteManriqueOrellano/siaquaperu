@@ -12,6 +12,7 @@ export interface IProyecto {
     nombreProyecto:string;
     snip:string;
     cliente:string;
+    aliasProyecto:string;
     anioPriorizacion:string;
     fechaAprobacion:string;
     nroInformeTecnico:string;

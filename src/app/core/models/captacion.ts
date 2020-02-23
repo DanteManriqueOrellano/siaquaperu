@@ -8,7 +8,7 @@ export interface ICaptacion {
     tipoCaptacion:string;
     antiguedad:string;
     mantenimientos:IMantenimiento[];
-    funcionamiento:string;
+    funcionamiento:boolean;
     fugaAgua:boolean;
     operativo:boolean;
     fotos:IFoto[];

@@ -1,6 +1,6 @@
 <section [formGroup]='formGroup'>
     <fieldset>
-        <legend>Sistema de Agua</legend>
+        <legend>Intervenciones en el Sistema de Agua</legend>
         <div [formArrayName]="formControlNames.intervenciones"
         *ngFor="let unaIntervencion of formGroupControls.intervenciones.controls; let i = index">
         <app-intervencion [formControl]="unaIntervencion"></app-intervencion>
