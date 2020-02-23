@@ -1,8 +1,12 @@
 import { Component} from '@angular/core';
-import { NgxSubFormComponent,Controls,subformComponentProviders, ArrayPropertyKey, ArrayPropertyValue } from 'ngx-sub-form';
+import { NgxSubFormComponent,Controls,subformComponentProviders, ArrayPropertyKey, ArrayPropertyValue, NgxFormWithArrayControls, NgxSubFormRemapComponent } from 'ngx-sub-form';
 import { IProyecto } from 'src/app/core/models/proyecto';
 import { FormControl, FormArray, Validators } from '@angular/forms';
 import { ILocalidad } from 'src/app/core/models/localidad';
+import { IViaAcceso } from 'src/app/core/models/viaacceso';
+import { IFoto } from 'src/app/core/models/foto';
+import { IObjetivoMuni } from 'src/app/core/models/objetivomuni';
+import { IObjetivoProy } from 'src/app/core/models/objetivoproy';
 
 @Component({
   selector: 'app-nuevoproyecto',
@@ -10,7 +14,9 @@ import { ILocalidad } from 'src/app/core/models/localidad';
   styleUrls: ['./nuevoproyecto.component.css'],
   providers:subformComponentProviders(NuevoproyectoComponent),
 })
-export class NuevoproyectoComponent extends NgxSubFormComponent<ILocalidad[], IProyecto> {
+export class NuevoproyectoComponent extends NgxSubFormRemapComponent<[ILocalidad[],IViaAcceso[]],IProyecto> implements NgxFormWithArrayControls<IProyecto>  {
+  
+  
   protected getFormControls(): Controls<IProyecto> {
     return {
       nombreProyecto: new FormControl(),
@@ -31,18 +37,40 @@ export class NuevoproyectoComponent extends NgxSubFormComponent<ILocalidad[], IP
       viasAcceso: new FormArray([]),
     }
   }
-  public createFormArrayControl(
-    key: ArrayPropertyKey<IProyecto> | undefined,
-    value: ArrayPropertyValue<IProyecto>,
-  ): FormControl {
-    switch (key) {
-      // note: the following string is type safe based on your form properties!
+  public createFormArrayControl(key: "localidades"  | "viasAcceso", value: ILocalidad | IViaAcceso | IFoto | IObjetivoMuni | IObjetivoProy): FormControl {
+    switch (key){
+      case 'viasAcceso':
+        return new FormControl(value);
       case 'localidades':
-        return new FormControl(value, [Validators.required]);
-      default:
         return new FormControl(value);
     }
   }
+  protected transformToFormGroup(obj: [ILocalidad[], IViaAcceso[]], defaultValues: Partial<IProyecto>): IProyecto {
+    return {
+      localidades: !obj[0] ? [] : obj[0],
+      viasAcceso: !obj[1] ? [] : obj[1],
+      nombreProyecto:'',
+      cliente: '',
+      snip: '',
+      anioPriorizacion: '',
+      fechaAprobacion: '',
+      nroInformeTecnico: '',
+      responsable:defaultValues.responsable,//responsable de las unidades
+      aprobacionPerfil: '',
+      ubicacionproyecto:defaultValues.ubicacionproyecto,//ubicacion del proyecto
+      limiteProvincia:defaultValues.limiteProvincia,
+      fotos:defaultValues.fotos,
+      coordenada:defaultValues.coordenada,
+      objetivosMuni:defaultValues.objetivosMuni,
+      objetivosProy: defaultValues.objetivosProy,
+    }
+  }
+  
+  protected transformFromFormGroup(formValue: IProyecto): [ILocalidad[], IViaAcceso[]] {
+    return [formValue.localidades,formValue.viasAcceso]
+  }
+  
+
 
 
 
@@ -62,6 +90,21 @@ export class NuevoproyectoComponent extends NgxSubFormComponent<ILocalidad[], IP
         }
       })
     )
+
+  }
+  agregarViaAcceso(){
+    this.formGroupControls.viasAcceso.push(
+      this.createFormArrayControl('viasAcceso',{
+        nombreLugar:'',
+        tipoVia:'',
+        distancia:'',
+        tiempo:'',
+      })
+    )
+
+
+  }
+  eliminarViaAcceso(){
 
   }
 

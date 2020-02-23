@@ -1,28 +1,37 @@
-<fieldset>
-    <legend>Centro Educativo:</legend>
-    <mat-form-field>
-        <input matInput placeholder="Código Modular" autocomplete="off">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Nombre I.E" autocomplete="off">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Dirección I.E" autocomplete="off">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Nivel - Modalidad" autocomplete="off">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Gestión - Dependencia" autocomplete="off">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Nro. Alumnos" autocomplete="off">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Nro. Docentes" autocomplete="off">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Secciones" autocomplete="off">
-    </mat-form-field>
-    
-</fieldset>
+<section [formGroup]='formGroup'>
+
+    <fieldset>
+        <legend>Centro Educativo:</legend>
+        <mat-form-field>
+            <input [formControlName]='formControlNames.codigoModular' matInput placeholder="Código Modular"
+                autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input [formControlName]='formControlNames.nombreIE' matInput placeholder="Nombre I.E" autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input [formControlName]='formControlNames.direccionIE' matInput placeholder="Dirección I.E"
+                autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input [formControlName]='formControlNames.nivel_modalidad' matInput placeholder="Nivel - Modalidad"
+                autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input [formControlName]='formControlNames.gestion_dependencia' matInput placeholder="Gestión - Dependencia"
+                autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input [formControlName]='formControlNames.nro_alumnos' matInput placeholder="Nro. Alumnos"
+                autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input [formControlName]='formControlNames.nro_docentes' matInput placeholder="Nro. Docentes"
+                autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input [formControlName]='formControlNames.secciones' matInput placeholder="Secciones" autocomplete="off">
+        </mat-form-field>
+
+    </fieldset>
+</section>

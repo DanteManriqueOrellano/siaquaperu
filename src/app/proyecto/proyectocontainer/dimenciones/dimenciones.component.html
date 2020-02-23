@@ -1,15 +1,21 @@
-<fieldset>
-    <legend>Dimenciones:</legend>
-    <mat-form-field>
-        <input matInput placeholder="Largo" type="text" autocomplete="off">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Ancho" type="text" autocomplete="off">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Espesor" type="text" autocomplete="off">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Alto" type="text" autocomplete="off">
-    </mat-form-field>
-</fieldset>
+<section [formGroup]='formGroup'>
+
+    <fieldset>
+        <legend>Dimenciones:</legend>
+        <mat-form-field>
+            <input [formControlName]='formControlNames.largo' matInput placeholder="Largo" type="text"
+                autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input [formControlName]='formControlNames.ancho' matInput placeholder="Ancho" type="text"
+                autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input [formControlName]='formControlNames.espesor' matInput placeholder="Espesor" type="text"
+                autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+            <input [formControlName]='formControlNames.alto' matInput placeholder="Alto" type="text" autocomplete="off">
+        </mat-form-field>
+    </fieldset>
+</section>

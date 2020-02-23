@@ -3,17 +3,23 @@
     <fieldset>
         <legend>Localidades:</legend>
         <mat-form-field>
-            <input matInput [formControlName]='formControlNames.' placeholder="Nombre Localidad" autocomplete="off">
+            <input matInput [formControlName]='formControlNames.nombreLocalidad' placeholder="Nombre Localidad"
+                autocomplete="off">
         </mat-form-field>
+        <div [formArrayName]='formControlNames.centrosEducativos'
+            *ngFor="let unCentroEducativo of formControlNames.centrosEducativos.controls; let i = index">
 
-        <app-centroeducativo></app-centroeducativo>
+            <app-centroeducativo [formControl]='unCentroEducativo'></app-centroeducativo>
 
+        </div>
         <mat-form-field>
-            <input matInput placeholder="Viviendas Beneficiadas" autocomplete="off">
+            <input matInput [formControlName]='formControlNames.viviendasBeneficiadas'
+                placeholder="Viviendas Beneficiadas" autocomplete="off">
         </mat-form-field>
+        <app-sistemaagua [formControlName]="formControlNames.sistemaAgua"></app-sistemaagua>
 
-        <input type="file" placeholder="Informe Técnico Nº" autocomplete="off">
-        <app-historicoagua></app-historicoagua>
+
+
 
     </fieldset>
 </section>

@@ -35,14 +35,14 @@
 
     <div [formArrayName]="formControlNames.localidades"
         *ngFor="let unaLocalidad of formGroupControls.localidades.controls; let i = index">
-        <app-localidades [formControl]="unaLocalidad"></app-localidades>
+        <app-localidad [formControl]="unaLocalidad"></app-localidad>
     
         <button mat-mini-fab color="primary" (click)="eliminaLocalidad(i)" [disabled]="formGroup.disabled">
             <mat-icon>delete</mat-icon>
         </button>
     </div>
     <button mat-raised-button color="primary" (click)="agregaLocalidad()" [disabled]="formGroup.disabled">
-        Agrega UNA Localidad
+        Agrega una Localidad
     </button>
     
 
