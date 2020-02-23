@@ -6,16 +6,20 @@
             <input [formControlName]='formControlNames.nombreCaptacion' matInput placeholder="Nombre Captación"
                 autocomplete="off">
         </mat-form-field>
+        
         <mat-form-field>
             <input [formControlName]='formControlNames.aforo' matInput placeholder="Aforo" autocomplete="off">
         </mat-form-field>
+        
         <mat-form-field>
             <input [formControlName]='formControlNames.tipoCaptacion' matInput placeholder="Tipo de Captación"
                 autocomplete="off">
         </mat-form-field>
+        
         <mat-form-field>
             <input [formControlName]='formControlNames.antiguedad' matInput placeholder="Antiguedad" autocomplete="off">
         </mat-form-field>
+        
         <mat-form-field>
             <input [formControlName]='formControlNames.materialUtilizado' matInput placeholder="Material Utilizado"
                 autocomplete="off">
@@ -25,11 +29,11 @@
         <mat-checkbox [formControlName]='formControlNames.operativo'>Operativo</mat-checkbox>
         <mat-checkbox [formControlName]='formControlNames.funcionamiento'>Funcionamiento</mat-checkbox>
         
-        <div [formArrayName]="formControlName.mantenimientos" *ngFor="let unMantenimiento of formGroupControls.mantenimientos.controls; let i=index">
+        <div [formArrayName]="formControlNames.mantenimientos" *ngFor="let unMantenimiento of formGroupControls.mantenimientos.controls; let i=index">
             <app-mantenimiento [formControl]="unMantenimiento"></app-mantenimiento>
         </div>
         <button mat-raised-button color="primary" (click)="agregarMantenimiento()" [disabled]="formGroup.disabled">
-            Agregar Fotos de Captación
+            Agregar Mantenimiento
         </button>
         
 

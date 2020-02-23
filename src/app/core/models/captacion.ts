@@ -1,6 +1,5 @@
 import { IFoto } from './foto';
 import { IMantenimiento } from './mantenimiento';
-import { IMaterialUtilizado } from './materialutilizado';
 import { IDimension } from './dimencion';
 
 export interface ICaptacion {
@@ -13,6 +12,6 @@ export interface ICaptacion {
     fugaAgua:boolean;
     operativo:boolean;
     fotos:IFoto[];
-    materialUtilizado:IMaterialUtilizado;
+    materialUtilizado:string;
     dimension:IDimension;
 }
