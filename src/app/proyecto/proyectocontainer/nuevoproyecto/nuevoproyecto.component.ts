@@ -55,14 +55,14 @@ export class NuevoproyectoComponent extends NgxSubFormRemapComponent<[ILocalidad
       anioPriorizacion: '',
       fechaAprobacion: '',
       nroInformeTecnico: '',
-      responsable:defaultValues.responsable,//responsable de las unidades
+      responsable:{ejecutora:'',evaluadora:'',formuladora:''},//responsable de las unidades
       aprobacionPerfil: '',
-      ubicacionproyecto:defaultValues.ubicacionproyecto,//ubicacion del proyecto
-      limiteProvincia:defaultValues.limiteProvincia,
-      fotos:defaultValues.fotos,
-      coordenada:defaultValues.coordenada,
-      objetivosMuni:defaultValues.objetivosMuni,
-      objetivosProy: defaultValues.objetivosProy,
+      ubicacionproyecto: {distrito:'',provincia:'',region:''},//ubicacion del proyecto
+      limiteProvincia:{este:'',norte:'',oeste:'',sur:''},  
+      fotos: [{url:''}],
+      coordenada:{este:'',norte:'',latitud:''},
+      objetivosMuni:[{problema:'',solucion:''}],
+      objetivosProy: [{objetivo:''}],
     }
   }
   
@@ -92,7 +92,7 @@ export class NuevoproyectoComponent extends NgxSubFormRemapComponent<[ILocalidad
     )
 
   }
-  agregarViaAcceso(){
+  agregaViaAcceso(){
     this.formGroupControls.viasAcceso.push(
       this.createFormArrayControl('viasAcceso',{
         nombreLugar:'',
@@ -101,10 +101,8 @@ export class NuevoproyectoComponent extends NgxSubFormRemapComponent<[ILocalidad
         tiempo:'',
       })
     )
-
-
   }
-  eliminarViaAcceso(){
+  eliminaViaAcceso(){
 
   }
 

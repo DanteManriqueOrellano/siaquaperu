@@ -45,6 +45,18 @@
         Agrega una Localidad
     </button>
     
+    <div [formArrayName]="formControlNames.viasAcceso"
+        *ngFor="let unaVia of formGroupControls.viasAcceso.controls; let i = index">
+        <app-viaacceso [formControl]="unaVia"></app-viaacceso>
+    
+        <button mat-mini-fab color="primary" (click)="eliminaViaAcceso(i)" [disabled]="formGroup.disabled">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </div>
+    <button mat-raised-button color="primary" (click)="agregaViaAcceso()" [disabled]="formGroup.disabled">
+        Agrega una Via de Acceso
+    </button>
+    
 
 
 

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgxSubFormComponent,Controls,subformComponentProviders } from 'ngx-sub-form';
 import { IViaAcceso } from 'src/app/core/models/viaacceso';
-import { FormControl, FormsModule } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-viaacceso',

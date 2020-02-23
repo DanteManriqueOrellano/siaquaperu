@@ -12,7 +12,7 @@ import { FormControl } from '@angular/forms';
 export class FotoComponent extends NgxSubFormComponent<IFoto> {
   protected getFormControls(): Controls<IFoto> {
     return {
-      url: new FormControl();
+      url: new FormControl()
     }
   }
 
