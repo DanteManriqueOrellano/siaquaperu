@@ -76,7 +76,7 @@ export class NuevoproyectoComponent extends NgxSubFormRemapComponent<[ILocalidad
 
 
 
-  eliminaLocalidad(i){
+  eliminaLocalidad(i:number){
 
   }
   agregaLocalidad() {
@@ -104,7 +104,7 @@ export class NuevoproyectoComponent extends NgxSubFormRemapComponent<[ILocalidad
       })
     )
   }
-  eliminaViaAcceso(){
+  eliminaViaAcceso(i:number){
 
   }
   guardarProyecto(){
