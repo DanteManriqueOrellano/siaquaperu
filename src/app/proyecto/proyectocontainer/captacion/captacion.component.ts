@@ -40,7 +40,7 @@ export class CaptacionComponent extends NgxSubFormComponent<[IMantenimiento[],IF
   agregarMantenimiento(){
     this.formGroupControls.mantenimientos.push(
       this.createFormArrayControl('mantenimientos',{
-        entidadEjecutora:'',
+       
         tipoMantenimiento:''
       })
     )

@@ -1,1 +1,6 @@
-<p>configperfil works!</p>
+<app-checkbox-group-sub-form [formControl]="checkboxes"></app-checkbox-group-sub-form>
+
+<hr>
+
+<!-- check how our data set looks like -->
+<pre>{{ checkboxes.value | json }}</pre>

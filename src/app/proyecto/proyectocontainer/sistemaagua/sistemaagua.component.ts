@@ -45,7 +45,7 @@ export class SistemaaguaComponent extends NgxSubFormComponent<IIntervencion[], I
         fotos:[{url:''}],
         fugaAgua:false,
         funcionamiento:false,
-        mantenimientos:[{entidadEjecutora:'',tipoMantenimiento:''}],
+        mantenimientos:[{tipoMantenimiento:''}],
         materialUtilizado:'',
         nombreCaptacion:'',
         operativo:true,

@@ -52,6 +52,8 @@ import { ConfigdependenciaComponent } from '../dashboard/configdependencia/confi
 import { DashboardComponent } from '../dashboard/dashboard/dashboard.component';
 import { ConfigperfilComponent } from '../dashboard/dependencias/configperfil/configperfil.component';
 import { ConfigexptecnicoComponent } from '../dashboard/dependencias/configexptecnico/configexptecnico.component';
+import { CheckboxGroupSubFormComponent } from '../herramientas/checkbox-group-sub-form/checkbox-group-sub-form.component';
+import { CheckboxItemSubFormComponent } from '../herramientas/checkbox-group-sub-form/checkbox-item-sub-form/checkbox-item-sub-form.component';
 
 
 
@@ -59,7 +61,7 @@ import { ConfigexptecnicoComponent } from '../dashboard/dependencias/configexpte
 
 
 @NgModule({
-  declarations: [ProyectoContainerComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, CentroeducativoComponent, CaptacionComponent, MantenimientoComponent, UbicacionproyectoComponent, ResponsableComponent, ViaaccesoComponent, CoordenadaComponent, LimiteprovinciaComponent, ObjetivomuniComponent, ObjetivoproyComponent, LocalidadComponent, SistemaaguaComponent, IntervencionComponent, DimensionComponent, FotoComponent, OverviewComponent, ConfigdependenciaComponent, DashboardComponent, ConfigperfilComponent, ConfigexptecnicoComponent],
+  declarations: [ProyectoContainerComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, CentroeducativoComponent, CaptacionComponent, MantenimientoComponent, UbicacionproyectoComponent, ResponsableComponent, ViaaccesoComponent, CoordenadaComponent, LimiteprovinciaComponent, ObjetivomuniComponent, ObjetivoproyComponent, LocalidadComponent, SistemaaguaComponent, IntervencionComponent, DimensionComponent, FotoComponent, OverviewComponent, ConfigdependenciaComponent, DashboardComponent, ConfigperfilComponent, ConfigexptecnicoComponent, CheckboxGroupSubFormComponent, CheckboxItemSubFormComponent],
   imports: [
     CommonModule,
     ProyectoRoutingModule,

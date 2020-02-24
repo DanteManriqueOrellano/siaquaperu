@@ -27,6 +27,7 @@ export class NuevoproyectoComponent extends NgxSubFormRemapComponent<[ILocalidad
   }
   protected getFormControls(): Controls<IProyecto> {
     return {
+      dependenciasChk:new FormControl(),
       nombreProyecto: new FormControl(),
       cliente: new FormControl(),
       aliasProyecto:new FormControl(),

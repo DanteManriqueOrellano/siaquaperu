@@ -1,0 +1,7 @@
+<div [formGroup]="formGroup">
+    <div [formArrayName]="formControlNames.checkboxes">
+      <div *ngFor="let control of formGroupControls.checkboxes.controls">
+        <app-checkbox-item-sub-form [formControl]="control"></app-checkbox-item-sub-form>
+      </div>
+    </div>
+</div>

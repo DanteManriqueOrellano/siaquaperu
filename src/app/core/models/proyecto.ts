@@ -7,10 +7,12 @@ import { ICoordenada } from './coordenada';
 import { IObjetivoMuni } from './objetivomuni';
 import { IObjetivoProy } from './objetivoproy';
 import { IViaAcceso } from './viaacceso';
+import { CheckboxItem } from './checkbox-item.interface';
 
 export interface IProyecto {
     nombreProyecto:string;
     snip:string;
+    dependenciasChk?:CheckboxItem;
     cliente:string;
     aliasProyecto:string;
     anioPriorizacion:string;
