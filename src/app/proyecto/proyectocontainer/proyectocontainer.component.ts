@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IProyecto } from 'src/app/core/models/proyecto';
 
@@ -8,13 +8,12 @@ import { IProyecto } from 'src/app/core/models/proyecto';
   styleUrls: ['./proyectocontainer.component.css']
 })
 export class ProyectoContainerComponent implements OnInit {
-  proyectos:IProyecto[] = []
+  @Output('proyectos') proyectos:IProyecto[] = []
 
   constructor(private _ac:ActivatedRoute) { }
 
   ngOnInit() {
-    //console.log(this._ac.snapshot.data)//para obtner el dato del resolve
-    
+    //console.log(this._ac.snapshot.data)//para obtner el dato del resolve    
    this._ac.snapshot.data.proyectoid.subscribe(data=>{
     this.proyectos = data;
    })
@@ -23,6 +22,3 @@ export class ProyectoContainerComponent implements OnInit {
   }
 
 }
-/*if(!this.listaProyectos) {
-  this.listaProyectos.push(this.listaProyectos)
-}*/

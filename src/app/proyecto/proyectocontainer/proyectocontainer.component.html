@@ -1,6 +1,6 @@
 <section class="container">
     <div [ngSwitch]="proyectos.length">
-        <div *ngSwitchCase="!0"><app-listarproyecto></app-listarproyecto></div>
+        <div *ngSwitchCase="!0"><app-listarproyecto [proyectos]='proyectos'></app-listarproyecto></div>
         <div *ngSwitchCase="0"><app-addproyecto></app-addproyecto></div>        
     </div>
 </section>

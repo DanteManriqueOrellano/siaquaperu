@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProyectoContainerComponent } from './proyectocontainer/proyectocontainer.component';
 import { ProyectoresolverService } from '../servicios/proyectoresolver.service';
 import { NuevoproyectoComponent } from './proyectocontainer/nuevoproyecto/nuevoproyecto.component';
+import { OverviewComponent } from '../overview/overview.component';
 
 
 const routes: Routes = [
@@ -10,7 +11,8 @@ const routes: Routes = [
       proyectoid:ProyectoresolverService
     }
   },
-  {path:'proyecto',component:NuevoproyectoComponent}
+  {path:'proyecto',component:NuevoproyectoComponent},
+  {path:'project/:id/overview',component:OverviewComponent}
 ];
 
 @NgModule({

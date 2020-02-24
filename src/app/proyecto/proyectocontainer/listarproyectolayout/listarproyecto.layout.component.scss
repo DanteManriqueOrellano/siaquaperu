@@ -1,0 +1,12 @@
+@import '~@angular/material/theming';
+
+.clickable {
+  cursor: pointer;
+  &:hover {
+    @include mat-elevation(8);
+  }
+}
+.margen{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

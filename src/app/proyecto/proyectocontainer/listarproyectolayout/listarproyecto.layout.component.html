@@ -1,1 +1,7 @@
-<p>listarproyecto works!</p>
+
+<mat-card routerLink='/proyecto'  matRipple class="clickable" >Generar Nuevo Proyecto</mat-card>
+    
+<div *ngFor="let proyecto of proyectos" class="margen">
+    <mat-card (click)=verProyecto(proyecto.id) matRipple class="clickable" >{{proyecto.nombreProyecto}}</mat-card>
+    
+</div>

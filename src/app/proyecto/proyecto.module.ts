@@ -43,13 +43,18 @@ import { SistemaaguaComponent } from './proyectocontainer/sistemaagua/sistemaagu
 import { IntervencionComponent } from './proyectocontainer/intervencion/intervencion.component';
 import { DimensionComponent } from './proyectocontainer/dimension/dimension.component';
 import { FotoComponent } from './proyectocontainer/foto/foto.component';
+import { OverviewComponent } from '../overview/overview.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 
 
 
 
 @NgModule({
-  declarations: [ProyectoContainerComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, CentroeducativoComponent, CaptacionComponent, MantenimientoComponent, UbicacionproyectoComponent, ResponsableComponent, ViaaccesoComponent, CoordenadaComponent, LimiteprovinciaComponent, ObjetivomuniComponent, ObjetivoproyComponent, LocalidadComponent, SistemaaguaComponent, IntervencionComponent, DimensionComponent, FotoComponent],
+  declarations: [ProyectoContainerComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, CentroeducativoComponent, CaptacionComponent, MantenimientoComponent, UbicacionproyectoComponent, ResponsableComponent, ViaaccesoComponent, CoordenadaComponent, LimiteprovinciaComponent, ObjetivomuniComponent, ObjetivoproyComponent, LocalidadComponent, SistemaaguaComponent, IntervencionComponent, DimensionComponent, FotoComponent, OverviewComponent],
   imports: [
     CommonModule,
     ProyectoRoutingModule,
@@ -67,6 +72,10 @@ import { FotoComponent } from './proyectocontainer/foto/foto.component';
     MatCardModule,
     MatCheckboxModule,
     MatIconModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
 
   ],
   providers:[

@@ -10,11 +10,14 @@ import { IProyecto } from '../core/models/proyecto';
 export class ProyectoService {
 
   private proyectoCollection: AngularFirestoreCollection<IProyecto>;
+  private proyectos: Observable<IProyecto[]>;
   private proyectoDocument: AngularFirestoreDocument<IProyecto>
-  public proyectos: Observable<IProyecto[]>;
+  private proyecto: Observable<IProyecto>
+  
 
   constructor(private readonly afs: AngularFirestore) {
     this.proyectoCollection = this.afs.collection<IProyecto>('proyectos');
+    
 
     this.proyectos = this.proyectoCollection.snapshotChanges() // stateChanges(['added'])
       .pipe(
@@ -34,18 +37,23 @@ export class ProyectoService {
     return identiicador
   }
   public listaTodosProyectos(){
-    return this.proyectoCollection.valueChanges();
+    return this.proyectos;
   }
-  public unProyectoPorId(id:string){
-    return this.proyectoCollection.doc(id).valueChanges()
-     
+  public unProyectoPorId(iddocument:string){
     
+    //return this.proyectoCollection.doc<IProyecto>(iddocument).valueChanges()
+    this.proyectoDocument = this.proyectoCollection.doc<IProyecto>(iddocument); // stateChanges(['added'])
+      this.proyecto = this.proyectoDocument.snapshotChanges()
+      .pipe(
+        map(a => {
+          if(!a.payload.exists) return null;
+          const data = a.payload.data() as IProyecto;
+          const id = a.payload.id;  
+          return { id , ...data };
+        }
+        )
+      );
+      return this.proyecto
   }
   
-  getProyectById(id:string){
-    return {nombre:'nombre del proyecto by id'}
-  }
-  getListProyects(){
-    return []
-  }
 }
