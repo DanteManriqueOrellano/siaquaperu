@@ -36,6 +36,7 @@ export class NuevoproyectoComponent extends NgxSubFormRemapComponent<[ILocalidad
       objetivosProy: new FormControl(),
       localidades:new FormArray([]),//localidades que abarca el proyecto
       viasAcceso: new FormArray([]),
+     
     }
   }
   public createFormArrayControl(key: "localidades"  | "viasAcceso", value: ILocalidad | IViaAcceso | IFoto | IObjetivoMuni | IObjetivoProy): FormControl {
@@ -48,6 +49,7 @@ export class NuevoproyectoComponent extends NgxSubFormRemapComponent<[ILocalidad
   }
   protected transformToFormGroup(obj: [ILocalidad[], IViaAcceso[]], defaultValues: Partial<IProyecto>): IProyecto {
     return {
+      
       localidades: !obj[0] ? [] : obj[0],
       viasAcceso: !obj[1] ? [] : obj[1],
       nombreProyecto:'',
@@ -65,6 +67,7 @@ export class NuevoproyectoComponent extends NgxSubFormRemapComponent<[ILocalidad
       coordenada:{este:'',norte:'',latitud:''},
       objetivosMuni:[{problema:'',solucion:''}],
       objetivosProy: [{objetivo:''}],
+      
     }
   }
   

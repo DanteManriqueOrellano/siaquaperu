@@ -4,6 +4,7 @@ import { ProyectoContainerComponent } from './proyectocontainer/proyectocontaine
 import { ProyectoresolverService } from '../servicios/proyectoresolver.service';
 import { NuevoproyectoComponent } from './proyectocontainer/nuevoproyecto/nuevoproyecto.component';
 import { OverviewComponent } from '../overview/overview.component';
+import { ConfigdependenciaComponent } from '../dashboard/configdependencia/configdependencia.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,19 @@ const routes: Routes = [
     }
   },
   {path:'proyecto',component:NuevoproyectoComponent},
-  {path:'project/:id/overview',component:OverviewComponent}
+  {path:'project/:id/overview',component:OverviewComponent,
+    children: [
+    {
+      path: 'configura', component: ConfigdependenciaComponent,
+      /*children: [
+        { path: 'perfil', component: ConfigperfilComponent },
+        { path: 'exptecnico', component: ConfigexptecnicoComponent }
+      ]*/
+    },
+    /*{
+      path:'cira',component:CiraComponent
+    }*/
+  ]}
 ];
 
 @NgModule({

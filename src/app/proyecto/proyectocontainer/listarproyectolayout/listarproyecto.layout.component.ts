@@ -15,7 +15,7 @@ export class ListarproyectoComponent implements OnInit {
   }
   verProyecto(idproyecto:string){
     this.router.navigate(
-      ["/project",idproyecto,"overview"]
+      ["/project",idproyecto,"overview","configura"]
     )
   }
 
