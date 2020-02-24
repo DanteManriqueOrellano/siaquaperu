@@ -52,7 +52,7 @@ export class OverviewComponent implements OnInit,OnDestroy  {
       mergeMap(  x=> this.webApi.unProyectoPorId(x.get('id'))),
       takeUntil(this.unsubscribe$)
     ).subscribe( (value:IProyecto)=> {
-     this.proyecto.nombreProyecto = value.nombreProyecto;
+     this.proyecto.aliasProyecto = value.aliasProyecto;
      this.cd.markForCheck();
       
     })

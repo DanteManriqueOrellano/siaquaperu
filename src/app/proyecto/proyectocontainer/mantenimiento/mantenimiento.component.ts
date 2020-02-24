@@ -12,7 +12,7 @@ import { FormControl } from '@angular/forms';
 export class MantenimientoComponent extends NgxSubFormComponent<IMantenimiento>{
   protected getFormControls(): Controls<IMantenimiento> {
     return {
-      entidadEjecutora:new FormControl(),
+      
       tipoMantenimiento: new FormControl()
     }
   }

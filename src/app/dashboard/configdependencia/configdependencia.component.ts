@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-configdependencia',
@@ -7,20 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfigdependenciaComponent implements OnInit {
 
-  configuraciones:any[] = [
-    {id:'01'
 
-  }]
-
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
-  configPerfil(){
-
-  }
-  configTecnico(){
-    
-  }
+  
 
 }

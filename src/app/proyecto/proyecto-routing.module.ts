@@ -5,6 +5,8 @@ import { ProyectoresolverService } from '../servicios/proyectoresolver.service';
 import { NuevoproyectoComponent } from './proyectocontainer/nuevoproyecto/nuevoproyecto.component';
 import { OverviewComponent } from '../overview/overview.component';
 import { ConfigdependenciaComponent } from '../dashboard/configdependencia/configdependencia.component';
+import { ConfigperfilComponent } from '../dashboard/dependencias/configperfil/configperfil.component';
+import { ConfigexptecnicoComponent } from '../dashboard/dependencias/configexptecnico/configexptecnico.component';
 
 
 const routes: Routes = [
@@ -17,11 +19,13 @@ const routes: Routes = [
     children: [
     {
       path: 'configura', component: ConfigdependenciaComponent,
-      /*children: [
+      
+      children: [
         { path: 'perfil', component: ConfigperfilComponent },
         { path: 'exptecnico', component: ConfigexptecnicoComponent }
-      ]*/
+      ]
     },
+    
     /*{
       path:'cira',component:CiraComponent
     }*/

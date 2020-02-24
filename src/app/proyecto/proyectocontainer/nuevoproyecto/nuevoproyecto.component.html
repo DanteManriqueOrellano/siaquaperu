@@ -4,9 +4,7 @@
         <mat-form-field>
             <input matInput type="text" [formControlName]='formControlNames.nombreProyecto' placeholder="Nombre Proyecto" autocomplete="off">
         </mat-form-field>
-        <mat-form-field>
-            <input matInput type="text" [formControlName]='formControlNames.alias' placeholder="Alias del Proyecto" autocomplete="off">
-        </mat-form-field>
+        
         <mat-form-field>
             <mat-label>Fecha Aprovación</mat-label>
             <input matInput type="text" [formControlName]='formControlNames.fechaAprobacion' [matDatepicker]="picker" autocomplete="off">

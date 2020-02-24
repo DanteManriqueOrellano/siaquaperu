@@ -7,6 +7,8 @@ import { IViaAcceso } from 'src/app/core/models/viaacceso';
 import { IFoto } from 'src/app/core/models/foto';
 import { IObjetivoMuni } from 'src/app/core/models/objetivomuni';
 import { IObjetivoProy } from 'src/app/core/models/objetivoproy';
+import { ProyectoService } from 'src/app/servicios/proyecto.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nuevoproyecto',
@@ -17,6 +19,12 @@ import { IObjetivoProy } from 'src/app/core/models/objetivoproy';
 export class NuevoproyectoComponent extends NgxSubFormRemapComponent<[ILocalidad[],IViaAcceso[]],IProyecto> implements NgxFormWithArrayControls<IProyecto>  {
   
   
+  constructor(private apiWeb:ProyectoService,
+    private router:Router){
+    super();
+
+
+  }
   protected getFormControls(): Controls<IProyecto> {
     return {
       nombreProyecto: new FormControl(),
@@ -112,7 +120,10 @@ export class NuevoproyectoComponent extends NgxSubFormRemapComponent<[ILocalidad
   }
   guardarProyecto(){
     const proyecto = this.formGroupValues
-    console.log(proyecto)
+    const idproyecto = this.apiWeb.agregarUnProyecto(proyecto)
+    this.router.navigate(
+      ["/project",idproyecto,"overview","configura"]
+    )
   }
 
   
