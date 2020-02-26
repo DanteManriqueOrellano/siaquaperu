@@ -3,7 +3,25 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+    
+    <!--
+      <mat-toolbar routerLink='configura'>Menu</mat-toolbar>
+
+    -->
+    
+    <mat-toolbar>
+      <mat-toolbar-row>
+        <span>Second Line</span>
+        <span class="example-spacer"></span>
+        <button mat-button routerLink='configura'><mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon></button>
+        
+      
+      </mat-toolbar-row>
+      
+    </mat-toolbar>
+
+      
+    
     <mat-nav-list>
       <app-navlist></app-navlist>
     </mat-nav-list>
