@@ -1,15 +1,22 @@
-import { Component } from '@angular/core';
+import { Component,OnChanges,SimpleChanges, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { ShareddependenciasService } from 'src/app/shared/shareddependencias.service';
+import { MatCheckboxChange } from '@angular/material/checkbox';
 
-interface Idependenias {
-  readonly nombreDependencia:string;
+
+interface Idependencia {
+  nombreDependencia:string;
 }
-const dependencias: ReadonlyArray<Idependenias> = [
+const dependencias: ReadonlyArray<Idependencia> = [
   {nombreDependencia:'ALA'},
   {nombreDependencia:'CIRA'},
+  {nombreDependencia:'analisis'},
+  {nombreDependencia:'agua'},
+  {nombreDependencia:'cemento'},
+  {nombreDependencia:'tierra'},
   
 ];
-const dependenciasToCheckboxesFormat = (dependencias:ReadonlyArray<Idependenias>)=>
+const dependenciasToCheckboxesFormat = (dependencias:ReadonlyArray<Idependencia>)=>
 !dependencias ? [] :dependencias.map(dependencia=>({checked:false,nombreDependencia:dependencia.nombreDependencia}))
 
 @Component({
@@ -18,6 +25,12 @@ const dependenciasToCheckboxesFormat = (dependencias:ReadonlyArray<Idependenias>
   styleUrls: ['./configperfil.component.css']
 })
 export class ConfigperfilComponent  {
-
+  
   public checkboxes: FormControl = new FormControl(dependenciasToCheckboxesFormat(dependencias));
+  
+  
+
+
+
+  
 }

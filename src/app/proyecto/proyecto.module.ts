@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatCheckboxModule, MAT_CHECKBOX_CLICK_ACTION} from '@angular/material/checkbox';
 import { ProyectoRoutingModule } from './proyecto-routing.module';
 import { ProyectoContainerComponent } from './proyectocontainer/proyectocontainer.component';
 
@@ -54,6 +54,8 @@ import { ConfigperfilComponent } from '../dashboard/dependencias/configperfil/co
 import { ConfigexptecnicoComponent } from '../dashboard/dependencias/configexptecnico/configexptecnico.component';
 import { CheckboxGroupSubFormComponent } from '../herramientas/checkbox-group-sub-form/checkbox-group-sub-form.component';
 import { CheckboxItemSubFormComponent } from '../herramientas/checkbox-group-sub-form/checkbox-item-sub-form/checkbox-item-sub-form.component';
+import { NavlistComponent } from '../overview/navlist/navlist.component';
+
 
 
 
@@ -61,7 +63,7 @@ import { CheckboxItemSubFormComponent } from '../herramientas/checkbox-group-sub
 
 
 @NgModule({
-  declarations: [ProyectoContainerComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, CentroeducativoComponent, CaptacionComponent, MantenimientoComponent, UbicacionproyectoComponent, ResponsableComponent, ViaaccesoComponent, CoordenadaComponent, LimiteprovinciaComponent, ObjetivomuniComponent, ObjetivoproyComponent, LocalidadComponent, SistemaaguaComponent, IntervencionComponent, DimensionComponent, FotoComponent, OverviewComponent, ConfigdependenciaComponent, DashboardComponent, ConfigperfilComponent, ConfigexptecnicoComponent, CheckboxGroupSubFormComponent, CheckboxItemSubFormComponent],
+  declarations: [ProyectoContainerComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, CentroeducativoComponent, CaptacionComponent, MantenimientoComponent, UbicacionproyectoComponent, ResponsableComponent, ViaaccesoComponent, CoordenadaComponent, LimiteprovinciaComponent, ObjetivomuniComponent, ObjetivoproyComponent, LocalidadComponent, SistemaaguaComponent, IntervencionComponent, DimensionComponent, FotoComponent, OverviewComponent, ConfigdependenciaComponent, DashboardComponent, ConfigperfilComponent, ConfigexptecnicoComponent, CheckboxGroupSubFormComponent, CheckboxItemSubFormComponent, NavlistComponent],
   imports: [
     CommonModule,
     ProyectoRoutingModule,
@@ -87,6 +89,7 @@ import { CheckboxItemSubFormComponent } from '../herramientas/checkbox-group-sub
   ],
   providers:[
     {provide: MAT_DATE_LOCALE, useValue: 'es-ES'},
+    {provide: MAT_CHECKBOX_CLICK_ACTION, useValue: 'check'}
   ]
 })
 export class ProyectoModule { }

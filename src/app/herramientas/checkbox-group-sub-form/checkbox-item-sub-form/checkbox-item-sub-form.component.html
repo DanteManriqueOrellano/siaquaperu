@@ -1,5 +1,5 @@
 <div [formGroup]="formGroup">
-    <mat-checkbox [formControlName]="formControlNames.checked"></mat-checkbox> 
+    <mat-checkbox [formControlName]="formControlNames.checked" (change)="sendStatusChk($event)"></mat-checkbox> 
     
     {{ formGroupValues.nombreDependencia }}
 </div>
