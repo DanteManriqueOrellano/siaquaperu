@@ -7,29 +7,37 @@ import { OverviewComponent } from '../overview/overview.component';
 import { ConfigdependenciaComponent } from '../dashboard/configdependencia/configdependencia.component';
 import { ConfigperfilComponent } from '../dashboard/dependencias/configperfil/configperfil.component';
 import { ConfigexptecnicoComponent } from '../dashboard/dependencias/configexptecnico/configexptecnico.component';
+import { AlaComponent } from '../formatos/ala/ala.component';
+import { CiraComponent } from '../formatos/cira/cira.component';
 
 
 const routes: Routes = [
-  {path:'',component:ProyectoContainerComponent,resolve:{
-      proyectoid:ProyectoresolverService
+  {
+    path: '', component: ProyectoContainerComponent, resolve: {
+      proyectoid: ProyectoresolverService
     }
   },
-  {path:'proyecto',component:NuevoproyectoComponent},
-  {path:'project/:id/overview',component:OverviewComponent,
+  { path: 'proyecto', component: NuevoproyectoComponent },
+  {
+    path: 'project/:id/overview', component: OverviewComponent,
     children: [
-    {
-      path: 'configura', component: ConfigdependenciaComponent,
       
-      children: [
-        { path: 'perfil', component: ConfigperfilComponent },
-        { path: 'exptecnico', component: ConfigexptecnicoComponent }
-      ]
-    },
-    
-    /*{
-      path:'cira',component:CiraComponent
-    }*/
-  ]}
+      {
+        path: 'configura', component: ConfigdependenciaComponent,
+
+        children: [
+          { path: 'perfil', component: ConfigperfilComponent },
+          { path: 'exptecnico', component: ConfigexptecnicoComponent }
+        ],
+
+      },
+      {path:'formato/cira',component:CiraComponent},
+      {path:'formato/ala',component:AlaComponent},
+
+
+    ]
+  },
+
 ];
 
 @NgModule({

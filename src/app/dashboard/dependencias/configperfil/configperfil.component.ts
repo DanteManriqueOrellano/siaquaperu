@@ -10,10 +10,7 @@ interface Idependencia {
 const dependencias: ReadonlyArray<Idependencia> = [
   {nombreDependencia:'ALA'},
   {nombreDependencia:'CIRA'},
-  {nombreDependencia:'analisis'},
-  {nombreDependencia:'agua'},
-  {nombreDependencia:'cemento'},
-  {nombreDependencia:'tierra'},
+  
   
 ];
 const dependenciasToCheckboxesFormat = (dependencias:ReadonlyArray<Idependencia>)=>

@@ -55,6 +55,8 @@ import { ConfigexptecnicoComponent } from '../dashboard/dependencias/configexpte
 import { CheckboxGroupSubFormComponent } from '../herramientas/checkbox-group-sub-form/checkbox-group-sub-form.component';
 import { CheckboxItemSubFormComponent } from '../herramientas/checkbox-group-sub-form/checkbox-item-sub-form/checkbox-item-sub-form.component';
 import { NavlistComponent } from '../overview/navlist/navlist.component';
+import { AlaComponent } from '../formatos/ala/ala.component';
+import { CiraComponent } from '../formatos/cira/cira.component';
 
 
 
@@ -63,7 +65,7 @@ import { NavlistComponent } from '../overview/navlist/navlist.component';
 
 
 @NgModule({
-  declarations: [ProyectoContainerComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, CentroeducativoComponent, CaptacionComponent, MantenimientoComponent, UbicacionproyectoComponent, ResponsableComponent, ViaaccesoComponent, CoordenadaComponent, LimiteprovinciaComponent, ObjetivomuniComponent, ObjetivoproyComponent, LocalidadComponent, SistemaaguaComponent, IntervencionComponent, DimensionComponent, FotoComponent, OverviewComponent, ConfigdependenciaComponent, DashboardComponent, ConfigperfilComponent, ConfigexptecnicoComponent, CheckboxGroupSubFormComponent, CheckboxItemSubFormComponent, NavlistComponent],
+  declarations: [ProyectoContainerComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, CentroeducativoComponent, CaptacionComponent, MantenimientoComponent, UbicacionproyectoComponent, ResponsableComponent, ViaaccesoComponent, CoordenadaComponent, LimiteprovinciaComponent, ObjetivomuniComponent, ObjetivoproyComponent, LocalidadComponent, SistemaaguaComponent, IntervencionComponent, DimensionComponent, FotoComponent, OverviewComponent, ConfigdependenciaComponent, DashboardComponent, ConfigperfilComponent, ConfigexptecnicoComponent, CheckboxGroupSubFormComponent, CheckboxItemSubFormComponent, NavlistComponent, AlaComponent, CiraComponent],
   imports: [
     CommonModule,
     ProyectoRoutingModule,

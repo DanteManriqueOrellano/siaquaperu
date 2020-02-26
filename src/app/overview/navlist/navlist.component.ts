@@ -13,11 +13,7 @@ import { CheckboxItem } from 'src/app/core/models/checkbox-item.interface';
 })
 export class NavlistComponent implements OnInit, OnDestroy {
   private unsubscribe$ = new Subject<void>()
-  /*enlaces:any[ ]=[
-    {routerLink:'/algo',placeholder:'algo' },
-    {routerLink:'/tuyo',placeholder:'tuyo' },
-    {routerLink:'/mio',placeholder:'mio' },
-  ]*/
+ 
   
   statusChange:CheckboxItem = {checked:false,nombreDependencia:''};
   ala:CheckboxItem = {checked:false,nombreDependencia:''}
