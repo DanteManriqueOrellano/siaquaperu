@@ -6,7 +6,7 @@ import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-intervencion',
   templateUrl: './intervencion.component.html',
-  styleUrls: ['./intervencion.component.css'],
+  styleUrls: ['./intervencion.component.scss'],
   providers:subformComponentProviders(IntervencionComponent),
 })
 export class IntervencionComponent extends NgxSubFormComponent<IIntervencion>  {

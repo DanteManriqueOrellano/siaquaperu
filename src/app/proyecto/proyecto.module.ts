@@ -1,6 +1,7 @@
+
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 import {ObserversModule} from '@angular/cdk/observers';
 import { CommonModule } from '@angular/common';
@@ -71,8 +72,7 @@ import { PlatformModule } from '@angular/cdk/platform';
 @NgModule({
   declarations: [ProyectoContainerComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, CentroeducativoComponent, CaptacionComponent, MantenimientoComponent, UbicacionproyectoComponent, ResponsableComponent, ViaaccesoComponent, CoordenadaComponent, LimiteprovinciaComponent, ObjetivomuniComponent, ObjetivoproyComponent, LocalidadComponent, SistemaaguaComponent, IntervencionComponent, DimensionComponent, FotoComponent, OverviewComponent, ConfigdependenciaComponent, DashboardComponent, ConfigperfilComponent, ConfigexptecnicoComponent, CheckboxGroupSubFormComponent, CheckboxItemSubFormComponent, NavlistComponent, AlaComponent, CiraComponent],
   imports: [
-    BrowserAnimationsModule,
-    BrowserModule,
+   
     CommonModule,
     ProyectoRoutingModule,
     MatFormFieldModule,

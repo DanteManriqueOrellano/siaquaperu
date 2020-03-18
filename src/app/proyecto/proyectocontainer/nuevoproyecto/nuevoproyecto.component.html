@@ -1,86 +1,123 @@
-<button (click)="toogletodos()">toogle</button>
+
 <ul [@listAnimation]="todos.length" class="todos">
 
-    <li *ngFor="todo of todos" class="todo">
+    <li *ngFor="let todo of todos" class="todo">
         {{todo.data}}
         <button class="remove" (click)="removeTodo(todo.id)">&times;</button>
 
     </li>
     
 </ul>
-
-
-<!--
-    <section [formGroup]='formGroup'>
-    <fieldset>
-        <legend>Generalidades:</legend>
-        <mat-form-field>
-            <input matInput type="text" [formControlName]='formControlNames.nombreProyecto' placeholder="Nombre Proyecto" autocomplete="off">
-        </mat-form-field>
+<mat-card class="example-card">
+    <mat-card-header>
+      
+      <mat-card-title>Información</mat-card-title>
+      
+    </mat-card-header>
+   
+    <mat-card-content>
+        <section [formGroup]='formGroup'>
+            <fieldset>
+                <legend>Generalidades:</legend>
+                <mat-form-field>
+                    <input matInput type="text" [formControlName]='formControlNames.nombreProyecto' placeholder="Nombre Proyecto" autocomplete="off">
+                </mat-form-field>
+                
+                <mat-form-field>
+                    <mat-label>Fecha Aprovación</mat-label>
+                    <input matInput type="text" [formControlName]='formControlNames.fechaAprobacion' [matDatepicker]="picker" autocomplete="off">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" [formControlName]='formControlNames.snip' placeholder="SNIP" autocomplete="off">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" [formControlName]='formControlNames.cliente' placeholder="Cliente" autocomplete="off">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" [formControlName]='formControlNames.nroInformeTecnico' placeholder="Informe Técnico Nº" autocomplete="off">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text"  [formControlName]='formControlNames.anioPriorizacion' placeholder="Año de Priorización" autocomplete="off">
+                </mat-form-field>
         
-        <mat-form-field>
-            <mat-label>Fecha Aprovación</mat-label>
-            <input matInput type="text" [formControlName]='formControlNames.fechaAprobacion' [matDatepicker]="picker" autocomplete="off">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput type="text" [formControlName]='formControlNames.snip' placeholder="SNIP" autocomplete="off">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput type="text" [formControlName]='formControlNames.cliente' placeholder="Cliente" autocomplete="off">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput type="text" [formControlName]='formControlNames.nroInformeTecnico' placeholder="Informe Técnico Nº" autocomplete="off">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput type="text"  [formControlName]='formControlNames.anioPriorizacion' placeholder="Año de Priorización" autocomplete="off">
-        </mat-form-field>
-
-        <mat-form-field>
-            <input matInput type="text"  [formControlName]='formControlNames.aliasProyecto' placeholder="alias del Proyecto" autocomplete="off">
-        </mat-form-field>
-    
-    </fieldset>
-    <app-responsable [formControlName]='formControlNames.responsable'></app-responsable>
-    <mat-form-field>
-        <input matInput type="text"  [formControlName]='formControlNames.anioPriorizacion' placeholder="Aprovación del Perfil" autocomplete="off">
-    </mat-form-field>
-    <app-ubicacionproyecto [formControlName]='formControlNames.ubicacionproyecto'></app-ubicacionproyecto>
-    <app-limiteprovincia [formControlName]='formControlNames.limiteProvincia'></app-limiteprovincia>
+                <mat-form-field>
+                    <input matInput type="text"  [formControlName]='formControlNames.aliasProyecto' placeholder="alias del Proyecto" autocomplete="off">
+                </mat-form-field>
+            
+            </fieldset>
+            <app-responsable [formControlName]='formControlNames.responsable'></app-responsable>
+            <mat-form-field>
+                <input matInput type="text"  [formControlName]='formControlNames.anioPriorizacion' placeholder="Aprovación del Perfil" autocomplete="off">
+            </mat-form-field>
+            <app-ubicacionproyecto [formControlName]='formControlNames.ubicacionproyecto'></app-ubicacionproyecto>
+            <app-limiteprovincia [formControlName]='formControlNames.limiteProvincia'></app-limiteprovincia>
+        
+        
+        
+            <!--
+                
+            <div [formArrayName]="formControlNames.localidades"
+                *ngFor="let unaLocalidad of formGroupControls.localidades.controls; let i = index">
+                <app-localidad [formControl]="unaLocalidad"></app-localidad>
+            
+                <button mat-mini-fab color="primary" (click)="eliminaLocalidad(i)" [disabled]="formGroup.disabled">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
 
 
+            -->
+            
+            
 
-    <div [formArrayName]="formControlNames.localidades"
-        *ngFor="let unaLocalidad of formGroupControls.localidades.controls; let i = index">
-        <app-localidad [formControl]="unaLocalidad"></app-localidad>
-    
-        <button mat-mini-fab color="primary" (click)="eliminaLocalidad(i)" [disabled]="formGroup.disabled">
-            <mat-icon>delete</mat-icon>
-        </button>
-    </div>
-    <button mat-raised-button color="primary" (click)="agregaLocalidad()" [disabled]="formGroup.disabled">
-        Agrega una Localidad
-    </button>
-    
-    <div [formArrayName]="formControlNames.viasAcceso"
-        *ngFor="let unaVia of formGroupControls.viasAcceso.controls; let i = index">
-        <app-viaacceso [formControl]="unaVia"></app-viaacceso>
-    
-        <button mat-mini-fab color="primary" (click)="eliminaViaAcceso(i)" [disabled]="formGroup.disabled">
-            <mat-icon>delete</mat-icon>
-        </button>
-    </div>
-    <button mat-raised-button color="primary" (click)="agregaViaAcceso()" [disabled]="formGroup.disabled">
-        Agrega una Via de Acceso
-    </button>
-    
-    <button (click)=guardarProyecto()>Configurar Proyecto</button>
+            <ul [@listAnimation]="formGroupControls.localidades.controls.length" class="todos">
 
+                
+                <li [formArrayName]="formControlNames.localidades"
+                *ngFor="let unaLocalidad of formGroupControls.localidades.controls; let i = index">
+                <app-localidad [formControl]="unaLocalidad"></app-localidad>
+            
+                <button  (click)="eliminaLocalidad(i)" >&times;
+                    
+                </button>
+            </li>
+                
+            </ul>
+        
+            <button mat-raised-button color="primary" (click)="agregaLocalidad()" [disabled]="formGroup.disabled">
+                Agrega una Localidad
+            </button>
+            
+            <div [formArrayName]="formControlNames.viasAcceso"
+                *ngFor="let unaVia of formGroupControls.viasAcceso.controls; let i = index">
+                <app-viaacceso [formControl]="unaVia"></app-viaacceso>
+            
+                <button mat-mini-fab color="primary" (click)="eliminaViaAcceso(i)" [disabled]="formGroup.disabled">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+            <button mat-raised-button color="primary" (click)="agregaViaAcceso()" [disabled]="formGroup.disabled">
+                Agrega una Via de Acceso
+            </button>
+            
+          
+        
+        
+            
+        
+        
+        </section>
+     
 
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button (click)=guardarProyecto()>Configurar Proyecto</button>
+        
+      
+    </mat-card-actions>
+  </mat-card>
 
-    
+   
 
-
-</section>
--->

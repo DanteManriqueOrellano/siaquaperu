@@ -47,14 +47,12 @@ export class NuevoproyectoComponent extends NgxSubFormRemapComponent<[ILocalidad
   constructor(private apiWeb:ProyectoService,
     private router:Router){
     super();
+    this.todos = this.todos.length ? [] : todos;
    
 
 
   }
-  toogletodos(){
-    this.todos = this.todos.length ? [] : todos;
-
-  }
+  
   removeTodo(id){
     this.todos = this.todos.filter(todo => todo.id !== id)
 
@@ -122,7 +120,8 @@ export class NuevoproyectoComponent extends NgxSubFormRemapComponent<[ILocalidad
 
 
 
-  eliminaLocalidad(i:number){
+  eliminaLocalidad(index:number){
+    this.formGroupControls.localidades.removeAt(index);
 
   }
   agregaLocalidad() {
