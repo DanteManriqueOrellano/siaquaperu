@@ -12,6 +12,8 @@ import { IFoto } from 'src/app/core/models/foto';
   providers:subformComponentProviders(CaptacionComponent)
 })
 export class CaptacionComponent extends NgxSubFormComponent<[IMantenimiento[],IFoto[]], ICaptacion>implements NgxFormWithArrayControls<ICaptacion> {
+  // TODO: add explicit constructor
+
   
   public createFormArrayControl(key: "mantenimientos" | "fotos", value: IMantenimiento | IFoto): FormControl {
     switch (key){

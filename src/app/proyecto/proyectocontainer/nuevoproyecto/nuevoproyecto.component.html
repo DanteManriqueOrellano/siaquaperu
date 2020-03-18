@@ -1,4 +1,17 @@
-<section [formGroup]='formGroup'>
+<button (click)="toogletodos()">toogle</button>
+<ul [@listAnimation]="todos.length" class="todos">
+
+    <li *ngFor="todo of todos" class="todo">
+        {{todo.data}}
+        <button class="remove" (click)="removeTodo(todo.id)">&times;</button>
+
+    </li>
+    
+</ul>
+
+
+<!--
+    <section [formGroup]='formGroup'>
     <fieldset>
         <legend>Generalidades:</legend>
         <mat-form-field>
@@ -70,3 +83,4 @@
 
 
 </section>
+-->

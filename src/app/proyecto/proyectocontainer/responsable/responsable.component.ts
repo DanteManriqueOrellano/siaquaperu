@@ -10,6 +10,8 @@ import { FormControl } from '@angular/forms';
   providers:subformComponentProviders(ResponsableComponent)
 })
 export class ResponsableComponent extends NgxSubFormComponent<IResponsable> {
+  // TODO: add explicit constructor
+
   protected getFormControls(): Controls<IResponsable> {
     return {
       ejecutora: new FormControl(),

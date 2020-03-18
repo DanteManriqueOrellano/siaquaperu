@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
-import {PlatformModule} from '@angular/cdk/platform';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import {ObserversModule} from '@angular/cdk/observers';
 import { CommonModule } from '@angular/common';
 import {MatStepperModule} from '@angular/material/stepper';
@@ -57,6 +59,8 @@ import { CheckboxItemSubFormComponent } from '../herramientas/checkbox-group-sub
 import { NavlistComponent } from '../overview/navlist/navlist.component';
 import { AlaComponent } from '../formatos/ala/ala.component';
 import { CiraComponent } from '../formatos/cira/cira.component';
+import { PlatformModule } from '@angular/cdk/platform';
+
 
 
 
@@ -67,6 +71,8 @@ import { CiraComponent } from '../formatos/cira/cira.component';
 @NgModule({
   declarations: [ProyectoContainerComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, CentroeducativoComponent, CaptacionComponent, MantenimientoComponent, UbicacionproyectoComponent, ResponsableComponent, ViaaccesoComponent, CoordenadaComponent, LimiteprovinciaComponent, ObjetivomuniComponent, ObjetivoproyComponent, LocalidadComponent, SistemaaguaComponent, IntervencionComponent, DimensionComponent, FotoComponent, OverviewComponent, ConfigdependenciaComponent, DashboardComponent, ConfigperfilComponent, ConfigexptecnicoComponent, CheckboxGroupSubFormComponent, CheckboxItemSubFormComponent, NavlistComponent, AlaComponent, CiraComponent],
   imports: [
+    BrowserAnimationsModule,
+    BrowserModule,
     CommonModule,
     ProyectoRoutingModule,
     MatFormFieldModule,
@@ -87,6 +93,7 @@ import { CiraComponent } from '../formatos/cira/cira.component';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
+   
 
   ],
   providers:[

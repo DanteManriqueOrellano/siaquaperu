@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, Optional} from '@angular/core';
 import { NgxSubFormComponent,Controls,subformComponentProviders, ArrayPropertyKey, ArrayPropertyValue, NgxFormWithArrayControls, NgxSubFormRemapComponent } from 'ngx-sub-form';
 import { IProyecto } from 'src/app/core/models/proyecto';
 import { FormControl, FormArray, Validators } from '@angular/forms';
@@ -9,20 +9,54 @@ import { IObjetivoMuni } from 'src/app/core/models/objetivomuni';
 import { IObjetivoProy } from 'src/app/core/models/objetivoproy';
 import { ProyectoService } from 'src/app/servicios/proyecto.service';
 import { Router } from '@angular/router';
+import { trigger, transition, query, style, stagger, animate } from '@angular/animations';
+
+const listAnimation =  trigger('listAnimation',[
+  transition('*<=>*',[
+    query(':enter',[
+      style({opacity:0}),
+      stagger('60ms',animate('600ms ease-out',style({opacity:1})))
+    ],
+    {optional:true}
+    ),
+    query(':leave',
+      animate('200ms',
+        style({opacity:0})
+      ),
+      {optional:true}
+    )
+  ]
+  )
+]);
+const todos = [
+  {id:1,data:'fist todo'},
+  {id:2,data:'second todo'},
+  {id:3,data:'third todo'},
+]
 
 @Component({
   selector: 'app-nuevoproyecto',
   templateUrl: './nuevoproyecto.component.html',
   styleUrls: ['./nuevoproyecto.component.css'],
   providers:subformComponentProviders(NuevoproyectoComponent),
+  animations:[listAnimation]
 })
 export class NuevoproyectoComponent extends NgxSubFormRemapComponent<[ILocalidad[],IViaAcceso[]],IProyecto> implements NgxFormWithArrayControls<IProyecto>  {
   
-  
+  todos = []
   constructor(private apiWeb:ProyectoService,
     private router:Router){
     super();
+   
 
+
+  }
+  toogletodos(){
+    this.todos = this.todos.length ? [] : todos;
+
+  }
+  removeTodo(id){
+    this.todos = this.todos.filter(todo => todo.id !== id)
 
   }
   protected getFormControls(): Controls<IProyecto> {
@@ -125,6 +159,10 @@ export class NuevoproyectoComponent extends NgxSubFormRemapComponent<[ILocalidad
     this.router.navigate(
       ["/project",idproyecto,"overview","configura"]
     )
+  }
+
+  joder(e){
+
   }
 
   

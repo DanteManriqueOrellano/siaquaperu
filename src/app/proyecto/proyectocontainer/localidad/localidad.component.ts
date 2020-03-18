@@ -12,6 +12,8 @@ import { IFoto } from 'src/app/core/models/foto';
   providers:subformComponentProviders(LocalidadComponent)
 })
 export class LocalidadComponent extends NgxSubFormComponent<ICentroEducativo[], ILocalidad> implements NgxFormWithArrayControls<ILocalidad> {
+  // TODO: add explicit constructor
+
   
   public createFormArrayControl(
     key: "centrosEducativos", 

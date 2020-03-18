@@ -10,6 +10,8 @@ import { FormControl } from '@angular/forms';
   providers:subformComponentProviders(IntervencionComponent),
 })
 export class IntervencionComponent extends NgxSubFormComponent<IIntervencion>  {
+  // TODO: add explicit constructor
+
   protected getFormControls():Controls<IIntervencion> {
     return {
       anio: new FormControl(),

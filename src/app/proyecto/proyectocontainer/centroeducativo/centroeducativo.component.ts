@@ -10,6 +10,8 @@ import { FormControl } from '@angular/forms';
   providers:subformComponentProviders(CentroeducativoComponent)
 })
 export class CentroeducativoComponent extends NgxSubFormComponent<ICentroEducativo> {
+  // TODO: add explicit constructor
+
   
   protected getFormControls():Controls<ICentroEducativo> {
     return {

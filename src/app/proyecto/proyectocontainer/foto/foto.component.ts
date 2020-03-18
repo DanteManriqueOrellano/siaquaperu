@@ -10,6 +10,8 @@ import { FormControl } from '@angular/forms';
   providers:subformComponentProviders(FotoComponent)
 })
 export class FotoComponent extends NgxSubFormComponent<IFoto> {
+  // TODO: add explicit constructor
+
   protected getFormControls(): Controls<IFoto> {
     return {
       url: new FormControl()

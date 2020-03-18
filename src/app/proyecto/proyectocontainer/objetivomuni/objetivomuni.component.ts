@@ -10,6 +10,8 @@ import { FormControl } from '@angular/forms';
   providers: subformComponentProviders(ObjetivomuniComponent)
 })
 export class ObjetivomuniComponent extends NgxSubFormComponent<IObjetivoMuni> {
+  // TODO: add explicit constructor
+
   protected getFormControls(): Controls<IObjetivoMuni> {
     return {
       problema: new FormControl(),

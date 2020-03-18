@@ -13,6 +13,8 @@ interface CheckboxGroupSubForm {
   providers:subformComponentProviders(CheckboxGroupSubFormComponent)
 })
 export class CheckboxGroupSubFormComponent extends NgxSubFormComponent<CheckboxItem[],CheckboxGroupSubForm> {
+  // TODO: add explicit constructor
+
   
 
   protected getFormControls(): Controls<CheckboxGroupSubForm> {

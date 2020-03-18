@@ -10,6 +10,8 @@ import { FormControl } from '@angular/forms';
   providers: subformComponentProviders(LimiteprovinciaComponent )
 })
 export class LimiteprovinciaComponent extends NgxSubFormComponent<ILimiteProvincia> {
+  // TODO: add explicit constructor
+
   protected getFormControls():Controls<ILimiteProvincia> {
     return {
       este: new FormControl(),

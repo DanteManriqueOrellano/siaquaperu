@@ -10,6 +10,8 @@ import { FormControl } from '@angular/forms';
   providers:subformComponentProviders(MantenimientoComponent)
 })
 export class MantenimientoComponent extends NgxSubFormComponent<IMantenimiento>{
+  // TODO: add explicit constructor
+
   protected getFormControls(): Controls<IMantenimiento> {
     return {
       

@@ -10,6 +10,8 @@ import { FormControl } from '@angular/forms';
   providers:subformComponentProviders(ObjetivoproyComponent)
 })
 export class ObjetivoproyComponent extends NgxSubFormComponent<IObjetivoProy> {
+  // TODO: add explicit constructor
+
   protected getFormControls(): Controls<IObjetivoProy> {
     return {
     objetivo:new FormControl(),

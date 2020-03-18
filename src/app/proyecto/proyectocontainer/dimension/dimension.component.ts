@@ -10,6 +10,8 @@ import { FormControl } from '@angular/forms';
   providers:subformComponentProviders(DimensionComponent)
 })
 export class DimensionComponent extends NgxSubFormComponent<IDimension> {
+  // TODO: add explicit constructor
+
   protected getFormControls():Controls<IDimension> {
     return {
       alto: new FormControl(),

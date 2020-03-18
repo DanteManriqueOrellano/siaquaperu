@@ -10,6 +10,8 @@ import { FormControl } from '@angular/forms';
   providers:subformComponentProviders(CoordenadaComponent)
 })
 export class CoordenadaComponent extends NgxSubFormComponent<ICoordenada> {
+  // TODO: add explicit constructor
+
   protected getFormControls(): Controls<ICoordenada> {
     return {
       este:new FormControl(),

@@ -4,7 +4,7 @@ import { ProyectoModule } from '../proyecto/proyecto.module';
 
 
 const routes: Routes = [
-  {path:'',loadChildren:'../proyecto/proyecto.module#ProyectoModule'}
+  {path:'',loadChildren:() => import('../proyecto/proyecto.module').then(m => m.ProyectoModule)}
 ];
 
 @NgModule({
