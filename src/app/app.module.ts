@@ -40,7 +40,7 @@ PdfMakeWrapper.setFonts(pdfFonts);
     LayoutModule,
     BrowserAnimationsModule,
     CoreModule, 
-    AppRoutingModule,
+    AppRoutingModule, 
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
 
