@@ -17,16 +17,18 @@
                 <mat-icon>delete</mat-icon>
             </button>
         </div>
-        <button mat-raised-button color="primary" (click)="agregaCentroEducativo()" [disabled]="formGroup.disabled">
-            Agrega un Centro Educativo
-        </button>
+        
         <mat-form-field>
             <input matInput [formControlName]='formControlNames.viviendasBeneficiadas'
                 placeholder="viviendasBeneficiadas" type="text" autocomplete="off">
         </mat-form-field>
-        <input type="file" [formControlName]='formControlNames.fotos'>
+        
 
         <app-sistemaagua [formControlName]="formControlNames.sistemaAgua"></app-sistemaagua>
+        <button mat-raised-button color="primary" (click)="agregaCentroEducativo()" [disabled]="formGroup.disabled">
+            Agrega un Centro Educativo
+        </button>
+        <input type="file" [formControlName]='formControlNames.fotos'>
     </fieldset>
 
 

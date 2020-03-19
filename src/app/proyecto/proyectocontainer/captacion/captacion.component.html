@@ -28,16 +28,20 @@
         <mat-checkbox [formControlName]='formControlNames.fugaAgua'>Fuga de Agua</mat-checkbox>
         <mat-checkbox [formControlName]='formControlNames.operativo'>Operativo</mat-checkbox>
         <mat-checkbox [formControlName]='formControlNames.funcionamiento'>Funcionamiento</mat-checkbox>
+        <app-dimension [formControlName]='formControlNames.dimension'></app-dimension>
         
         <div [formArrayName]="formControlNames.mantenimientos" *ngFor="let unMantenimiento of formGroupControls.mantenimientos.controls; let i=index">
+
             <app-mantenimiento [formControl]="unMantenimiento"></app-mantenimiento>
+            <button mat-mini-fab color="primary" (click)="eliminaMantenimiento(i)">
+                <mat-icon>delete</mat-icon>
+            </button>
         </div>
-        <button mat-raised-button color="primary" (click)="agregarMantenimiento()" [disabled]="formGroup.disabled">
-            Agregar Mantenimiento
-        </button>
+       
+       
         
 
-        <app-dimension [formControlName]='formControlNames.dimension'></app-dimension>
+       
         
         <div [formArrayName]='formControlNames.fotos'
             *ngFor="let unaFoto of formGroupControls.fotos.controls;let i=index">
@@ -45,6 +49,9 @@
         </div>
         <button mat-raised-button color="primary" (click)="agregarFoto()" [disabled]="formGroup.disabled">
             Agregar Fotos de Captación
+        </button>
+        <button mat-raised-button color="primary" (click)="agregarMantenimiento()" >
+            Agregar Mantenimiento
         </button>
     </fieldset>
 
