@@ -7,7 +7,7 @@ import { IIntervencion } from 'src/app/core/models/intervencion';
 @Component({
   selector: 'app-sistemaagua',
   templateUrl: './sistemaagua.component.html',
-  styleUrls: ['./sistemaagua.component.css'],
+  styleUrls: ['./sistemaagua.component.scss'],
   providers:subformComponentProviders(SistemaaguaComponent)
 })
 export class SistemaaguaComponent extends NgxSubFormComponent<IIntervencion[], ISistemaAgua> implements NgxFormWithArrayControls<ISistemaAgua> {

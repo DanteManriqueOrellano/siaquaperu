@@ -1,0 +1,24 @@
+.box {
+  
+    display: flex ;
+    align-items: center;
+    
+    justify-content: flex-start;
+}
+
+fieldset {
+  font-family: sans-serif;
+  border: 5px solid #f95252;
+  background: #FFD3CE;
+  border-radius: 5px;
+}
+
+fieldset legend {
+  background: #f95252;
+  color: #fff;
+  padding: 5px 10px ;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 5px #f95252 ;
+  margin-left: 20px;
+}
