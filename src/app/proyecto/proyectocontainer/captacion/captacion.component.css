@@ -1,3 +1,10 @@
+.box {
+  
+    display: flex ;
+    align-items: center;
+    
+    justify-content: flex-start;
+  }
 .mat-checkbox {
     margin-left: 10px;
 }
@@ -17,6 +24,6 @@ fieldset legend {
     padding: 5px 10px ;
     font-size: 18px;
     border-radius: 5px;
-    box-shadow: 0 0 0 5px #ddd;
+    box-shadow: 0 0 0 5px #1F497D;
     margin-left: 20px;
 }

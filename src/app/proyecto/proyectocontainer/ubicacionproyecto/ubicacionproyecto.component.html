@@ -1,13 +1,13 @@
 <section [formGroup]='formGroup'>
     <fieldset>
         <legend>Ubicacion del Proyecto:</legend>
-        <mat-form-field>
+        <mat-form-field class="campos">
             <input matInput [formControlName]='formControlNames.region' placeholder="Region" type="text" autocomplete="off">
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field class="campos">
             <input matInput [formControlName]='formControlNames.provincia' placeholder="Provincia" type="text" autocomplete="off">
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field class="campos">
             <input matInput [formControlName]='formControlNames.distrito' placeholder="Distrito" type="text" autocomplete="off">
         </mat-form-field>
     </fieldset>

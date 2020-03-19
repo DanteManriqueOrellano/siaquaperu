@@ -149,7 +149,8 @@ export class NuevoproyectoComponent extends NgxSubFormRemapComponent<[ILocalidad
       })
     )
   }
-  eliminaViaAcceso(i:number){
+  eliminaViaAcceso(index:number){
+    this.formGroupControls.viasAcceso.removeAt(index);
 
   }
   guardarProyecto(){
@@ -160,9 +161,6 @@ export class NuevoproyectoComponent extends NgxSubFormRemapComponent<[ILocalidad
     )
   }
 
-  joder(e){
-
-  }
 
   
 

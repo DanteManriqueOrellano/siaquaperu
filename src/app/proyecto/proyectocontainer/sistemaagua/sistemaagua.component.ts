@@ -29,7 +29,8 @@ export class SistemaaguaComponent extends NgxSubFormComponent<IIntervencion[], I
       propuesto:new FormControl()
     }
   }
-  eliminaIntervencion(i){
+  eliminaIntervencion(index:number){
+    this.formGroupControls.intervenciones.removeAt(index);
 
   }
   agregaIntervencion(){

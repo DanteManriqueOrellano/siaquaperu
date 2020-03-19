@@ -78,7 +78,8 @@ export class CaptacionComponent extends NgxSubFormRemapComponent<[IMantenimiento
     )
 
   }
-  eliminaMantenimiento(i){
+  eliminaMantenimiento(index:number){
+    this.formGroupControls.mantenimientos.removeAt(index);
     
   }
 

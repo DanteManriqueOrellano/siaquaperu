@@ -6,7 +6,7 @@ import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-centroeducativo',
   templateUrl: './centroeducativo.component.html',
-  styleUrls: ['./centroeducativo.component.css'],
+  styleUrls: ['./centroeducativo.component.scss'],
   providers:subformComponentProviders(CentroeducativoComponent)
 })
 export class CentroeducativoComponent extends NgxSubFormComponent<ICentroEducativo> {

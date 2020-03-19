@@ -1,11 +1,11 @@
 <section [formGroup]='formGroup'>
     <fieldset>
-        <legend>Intervención del Componente</legend>
+        <legend>Componentes Intervenidos</legend>
 
-        <mat-form-field>
+        <mat-form-field class="campos">
             <input matInput [formControlName]='formControlNames.anio' placeholder="Año de Intervencion" type="text" autocomplete="off">
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field class="campos">
             <input matInput [formControlName]='formControlNames.ejecutor' placeholder="Ejecutor" type="text" autocomplete="off">
         </mat-form-field>
         <app-captacion [formControlName]='formControlNames.captacion'></app-captacion>

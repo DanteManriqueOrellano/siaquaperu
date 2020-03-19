@@ -1,6 +1,6 @@
 <section [formGroup]='formGroup'>
     <fieldset>
-        <legend>Captación:</legend>
+        <legend>Captación</legend>
         
         <mat-form-field>
             <input [formControlName]='formControlNames.nombreCaptacion' matInput placeholder="Nombre Captación"
@@ -30,12 +30,14 @@
         <mat-checkbox [formControlName]='formControlNames.funcionamiento'>Funcionamiento</mat-checkbox>
         <app-dimension [formControlName]='formControlNames.dimension'></app-dimension>
         
-        <div [formArrayName]="formControlNames.mantenimientos" *ngFor="let unMantenimiento of formGroupControls.mantenimientos.controls; let i=index">
+        <div [formArrayName]="formControlNames.mantenimientos" *ngFor="let unMantenimiento of formGroupControls.mantenimientos.controls; let i=index" class="box">
 
-            <app-mantenimiento [formControl]="unMantenimiento"></app-mantenimiento>
-            <button mat-mini-fab color="primary" (click)="eliminaMantenimiento(i)">
+            <div><app-mantenimiento [formControl]="unMantenimiento"></app-mantenimiento></div>
+            <div><button mat-mini-fab color="accent" (click)="eliminaMantenimiento(i)">
                 <mat-icon>delete</mat-icon>
-            </button>
+            </button></div>
+            
+            
         </div>
        
        

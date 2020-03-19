@@ -6,7 +6,7 @@ import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-ubicacionproyecto',
   templateUrl: './ubicacionproyecto.component.html',
-  styleUrls: ['./ubicacionproyecto.component.css'],
+  styleUrls: ['./ubicacionproyecto.component.scss'],
   providers:subformComponentProviders(UbicacionproyectoComponent)
 })
 export class UbicacionproyectoComponent extends NgxSubFormComponent<IUbicacionproyecto> {

@@ -34,7 +34,9 @@ export class LocalidadComponent extends NgxSubFormComponent<ICentroEducativo[], 
       sistemaAgua:new FormControl()
     }
   }
-  eliminaCentroEducativo(i){}
+  eliminaCentroEducativo(index:number){
+    this.formGroupControls.centrosEducativos.removeAt(index);
+  }
   agregaCentroEducativo(){
     this.formGroupControls.centrosEducativos.push(
       this.createFormArrayControl('centrosEducativos',{
