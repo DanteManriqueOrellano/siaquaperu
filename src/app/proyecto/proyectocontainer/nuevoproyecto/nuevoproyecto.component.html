@@ -53,6 +53,7 @@
             </mat-form-field>
             <app-ubicacionproyecto [formControlName]='formControlNames.ubicacionproyecto'></app-ubicacionproyecto>
             <app-limiteprovincia [formControlName]='formControlNames.limiteProvincia'></app-limiteprovincia>
+            <app-coordenada [formControlName]='formControlNames.coordenada'></app-coordenada>
         
         
         
@@ -69,17 +70,7 @@
 
 
             
-            <!--
-                <div  [formArrayName]="formControlNames.viasAcceso"
-                *ngFor="let unaVia of formGroupControls.viasAcceso.controls; let i = index">
-                <app-viaacceso [formControl]="unaVia"></app-viaacceso>
             
-                <button mat-mini-fab color="primary" (click)="eliminaViaAcceso(i)" >
-                    <mat-icon>delete</mat-icon>
-                </button>
-            </div>
-
-            -->
             <div  [formArrayName]="formControlNames.viasAcceso"
                 *ngFor="let unaVia of formGroupControls.viasAcceso.controls; let i = index" class="box">
                 <div><app-viaacceso [formControl]="unaVia"></app-viaacceso></div>

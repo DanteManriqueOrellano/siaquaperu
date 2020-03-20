@@ -1,13 +1,13 @@
 <section [formGroup]='formGroup'>
     <fieldset>
-        <legend>Coordenadas:</legend>
-        <mat-form-field>
+        <legend>Coordenadas</legend>
+        <mat-form-field class="campos">
             <input matInput [formControlName]='formControlNames.norte' placeholder="Norte" type="text" autocomplete="off">
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field class="campos">
             <input matInput [formControlName]='formControlNames.este' placeholder="Este" type="text" autocomplete="off">
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field class="campos">
             <input matInput [formControlName]='formControlNames.latitud' placeholder="Latitud" type="text" autocomplete="off">
         </mat-form-field>
     </fieldset>

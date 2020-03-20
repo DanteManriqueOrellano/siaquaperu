@@ -1,0 +1,53 @@
+.box {
+  
+    display: flex ;
+    align-items: center;
+    
+    justify-content: flex-start;
+  }
+  .campos {
+    margin-left: 15px;
+  }
+  
+  fieldset {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      border: none;
+      box-shadow: 0px 0px 2px rgba(0,0,0,1);
+      background-color: rgb(240,240,240);
+      
+      margin: 20px;
+        padding: 0 10px 10px;
+        
+        border-radius: 8px;
+        box-shadow: 0 0 10px #666;
+        padding-top: 10px;
+      
+      
+    }
+    
+    legend {
+      background-color: #28ad63;
+      padding: 0.75rem;
+      font-size: 1.3rem;
+      color: white;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+      transform: translateX(-1.1rem);
+      box-shadow: -1px 1px 1px rgba(0,0,0,0.8);
+    }
+    
+    
+    
+    legend:after {
+      content: "";
+      height: 0;
+      width:0;
+      background-color: transparent;
+      border-top: 0.0rem solid transparent;
+      border-right:  0.35rem solid black;
+      border-bottom: 0.45rem solid transparent;
+      border-left: 0.0rem solid transparent;
+      position:absolute;
+      left:-0.075rem;
+      bottom: -0.45rem;
+    }
