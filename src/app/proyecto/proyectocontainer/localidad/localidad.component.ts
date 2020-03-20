@@ -23,7 +23,7 @@ export class LocalidadComponent extends NgxSubFormRemapComponent<[ICentroEducati
   protected transformToFormGroup(obj: [ICentroEducativo[], IFoto[]], defaultValues: Partial<ILocalidad>): ILocalidad {
     return {
       centrosEducativos:!obj[0] ? [] : obj[0],//[{codigoModular:'',direccionIE:'',gestion_dependencia:'',nivel_modalidad:'',nombreIE:'',nro_alumnos:0,nro_docentes:0,secciones:''}],
-      fotos:!obj[1] ? [] : obj[1],//[{url:''}],
+      fotos:!obj[1] ? [] : obj[1],
       nombreLocalidad:'',
       sistemaAgua:{
         propuesto:'',

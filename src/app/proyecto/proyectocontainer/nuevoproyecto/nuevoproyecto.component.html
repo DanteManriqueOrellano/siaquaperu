@@ -81,7 +81,15 @@
                 
             </div>
            
+            <div  [formArrayName]="formControlNames.fotos"
+                *ngFor="let unaFoto of formGroupControls.fotos.controls; let i = index" class="box">
+                <div><app-foto [formControl]="unaFoto"></app-foto></div>
+                <div><button mat-mini-fab color="primary" (click)="eliminaUnaFoto(unaFoto.value,i)" >
+                    <mat-icon>delete</mat-icon>
+                </button></div>
             
+                
+            </div>
             
             
             
@@ -99,6 +107,7 @@
     <mat-card-actions>
         <button mat-raised-button color="primary" (click)="agregaLocalidad()" >Agrega una Localidad</button>
         <button mat-raised-button color="primary" (click)="agregaViaAcceso()" >Agrega una Via de Acceso</button>
+        <button mat-raised-button color="primary" (click)="agregaUnaFotoUbicacion()" >Agrega Fotos de Ubicacion del Proyecto</button>
         <button mat-raised-button color="primary" (click)=guardarProyecto()>Configurar Proyecto</button>
     </mat-card-actions>
   </mat-card>
