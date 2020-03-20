@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
-import { NgxSubFormComponent,Controls,subformComponentProviders, NgxFormWithArrayControls, NgxSubFormRemapComponent } from 'ngx-sub-form';
+import {Component} from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+import { Controls,subformComponentProviders, NgxFormWithArrayControls, NgxSubFormRemapComponent } from 'ngx-sub-form';
 import { ICaptacion } from 'src/app/core/models/captacion';
 import { FormControl, FormArray } from '@angular/forms';
 import { IMantenimiento } from 'src/app/core/models/mantenimiento';
 import { IFoto } from 'src/app/core/models/foto';
+import { FotodialogComponent } from 'src/app/herramientas/fotodialog/fotodialog.component';
+import { AngularFireStorage } from '@angular/fire/storage';
+
 
 @Component({
   selector: 'app-captacion',
@@ -12,7 +16,10 @@ import { IFoto } from 'src/app/core/models/foto';
   providers:subformComponentProviders(CaptacionComponent)
 })
 export class CaptacionComponent extends NgxSubFormRemapComponent<[IMantenimiento[],IFoto[]], ICaptacion>implements NgxFormWithArrayControls<ICaptacion> {
-  
+  animal: string;
+  name: string;
+  fotosUrl:[string];
+  constructor(public dialog: MatDialog,private storage: AngularFireStorage) {super();}
   protected transformToFormGroup(obj: [IMantenimiento[], IFoto[]], defaultValues: Partial<ICaptacion>): ICaptacion {
     return {
       aforo:'',
@@ -71,16 +78,38 @@ export class CaptacionComponent extends NgxSubFormRemapComponent<[IMantenimiento
 
   }
   agregarFoto(){
-    this.formGroupControls.fotos.push(
-      this.createFormArrayControl('fotos',{
-        url:''
-      })
-    )
-
+    this.openDialog();
+  }
+  eliminaFoto(value,index){
+    
+    
+    this.storage.storage.refFromURL(value.url).delete();
+    this.formGroupControls.fotos.removeAt(index);
+    
+    
+    
   }
   eliminaMantenimiento(index:number){
     this.formGroupControls.mantenimientos.removeAt(index);
     
+  }
+  openDialog(): void {
+    const dialogRef = this.dialog.open(FotodialogComponent, {
+      width: '800px',
+      data: [{url: this.fotosUrl}]// se usa  en caso el dialogo tubiera campos a rellenar
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      
+      result.map((urlFoto)=>{
+        this.formGroupControls.fotos.push(
+          this.createFormArrayControl('fotos',{
+            url:urlFoto
+          })
+        )
+
+      })
+    });
   }
 
 

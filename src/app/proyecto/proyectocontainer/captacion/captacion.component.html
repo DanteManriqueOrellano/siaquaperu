@@ -45,18 +45,29 @@
 
        
         
-        <div [formArrayName]='formControlNames.fotos'
-            *ngFor="let unaFoto of formGroupControls.fotos.controls;let i=index">
-            <app-foto [formControl]='unaFoto'></app-foto>
+        <div [formArrayName]='formControlNames.fotos' *ngFor="let unaFoto of formGroupControls.fotos.controls;let i=index" class="box">
+            <div><app-foto [formControl]='unaFoto'></app-foto></div>
+            <div><button mat-mini-fab color="accent" (click)="eliminaFoto(unaFoto.value,i)">
+                <mat-icon>delete</mat-icon>
+            </button></div>
         </div>
-        <button mat-raised-button color="primary" (click)="agregarFoto()" [disabled]="formGroup.disabled">
+
+
+
+
+        <button mat-raised-button color="primary" (click)="agregarFoto()">
             Agregar Fotos de Captación
         </button>
+
+        
+
         <button mat-raised-button color="primary" (click)="agregarMantenimiento()" >
             Agregar Mantenimiento
         </button>
+        
     </fieldset>
 
 
 
 </section>
+

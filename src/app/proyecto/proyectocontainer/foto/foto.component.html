@@ -1,7 +1,10 @@
 <section [formGroup]='formGroup'>
     <fieldset>
         <input matInput [formControlName]= 'formControlNames.url' placeholder="url" type="text" autocomplete="off">
+        <img  src="{{formGroupValues.url}}" id="responsive-image"/>
 
     </fieldset>
+    
+    
 
 </section>

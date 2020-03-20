@@ -1,0 +1,20 @@
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column" *ngFor="let profile of profileUrl">
+        <p class=""><img [src]="profile" id="responsive-image"/></p>
+      </div>
+    </div>
+    </div>
+</section>
+
+
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="profileUrl" cdkFocusInitial>Aceptar</button><!--retorna el valor que se encuentra en profileUrl-->
+  <input type="file" multiple (change)="upload($event)">
+</div>
+
+
+

@@ -61,6 +61,8 @@ import { NavlistComponent } from '../overview/navlist/navlist.component';
 import { AlaComponent } from '../formatos/ala/ala.component';
 import { CiraComponent } from '../formatos/cira/cira.component';
 import { PlatformModule } from '@angular/cdk/platform';
+import { FotodialogComponent } from '../herramientas/fotodialog/fotodialog.component';
+import { MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -70,7 +72,7 @@ import { PlatformModule } from '@angular/cdk/platform';
 
 
 @NgModule({
-  declarations: [ProyectoContainerComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, CentroeducativoComponent, CaptacionComponent, MantenimientoComponent, UbicacionproyectoComponent, ResponsableComponent, ViaaccesoComponent, CoordenadaComponent, LimiteprovinciaComponent, ObjetivomuniComponent, ObjetivoproyComponent, LocalidadComponent, SistemaaguaComponent, IntervencionComponent, DimensionComponent, FotoComponent, OverviewComponent, ConfigdependenciaComponent, DashboardComponent, ConfigperfilComponent, ConfigexptecnicoComponent, CheckboxGroupSubFormComponent, CheckboxItemSubFormComponent, NavlistComponent, AlaComponent, CiraComponent],
+  declarations: [ProyectoContainerComponent, AddproyectoComponent, ListarproyectoComponent, NuevoproyectoComponent, CentroeducativoComponent, CaptacionComponent, MantenimientoComponent, UbicacionproyectoComponent, ResponsableComponent, ViaaccesoComponent, CoordenadaComponent, LimiteprovinciaComponent, ObjetivomuniComponent, ObjetivoproyComponent, LocalidadComponent, SistemaaguaComponent, IntervencionComponent, DimensionComponent, FotoComponent, OverviewComponent, ConfigdependenciaComponent, DashboardComponent, ConfigperfilComponent, ConfigexptecnicoComponent, CheckboxGroupSubFormComponent, CheckboxItemSubFormComponent, NavlistComponent, AlaComponent, CiraComponent, FotodialogComponent],
   imports: [
    
     CommonModule,
@@ -93,12 +95,17 @@ import { PlatformModule } from '@angular/cdk/platform';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
+    MatDialogModule,
    
 
   ],
+  entryComponents: [
+    FotodialogComponent
+  ],
   providers:[
     {provide: MAT_DATE_LOCALE, useValue: 'es-ES'},
-    {provide: MAT_CHECKBOX_CLICK_ACTION, useValue: 'check'}
+    {provide: MAT_CHECKBOX_CLICK_ACTION, useValue: 'check'},
+    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: true}}
   ]
 })
 export class ProyectoModule { }

@@ -18,11 +18,14 @@ import { RouterModule } from '@angular/router';
 import { CoreModule } from './core/core.module';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule, BUCKET } from '@angular/fire/storage';
 import { environment } from 'src/environments/environment';
+import 'firebase/storage'
 
 // Import pdfmake-wrapper and the fonts to use
 import { PdfMakeWrapper } from 'pdfmake-wrapper';
 import pdfFonts from "pdfmake/build/vfs_fonts"; // fonts provided for pdfmake
+
  
 // Set the fonts to use
 PdfMakeWrapper.setFonts(pdfFonts);
@@ -43,10 +46,15 @@ PdfMakeWrapper.setFonts(pdfFonts);
     AppRoutingModule, 
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
+    AngularFireStorageModule,
+      
+    
 
     
   ],
-  providers: [],
+  providers: [
+    { provide: BUCKET, useValue: 'siaquaperu.appspot.com' }
+  ],
   
   bootstrap: [AppComponent]
 })

@@ -55,5 +55,8 @@ export class ProyectoService {
       );
       return this.proyecto
   }
+  insertImageDetails(url:string){
+
+  }
   
 }
