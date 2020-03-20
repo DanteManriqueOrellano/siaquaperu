@@ -18,16 +18,40 @@
             *ngFor="let uncentroEducativo of formGroupControls.centrosEducativos.controls; let i = index" class="box">
             <div><app-centroeducativo [formControl]="uncentroEducativo"></app-centroeducativo></div>
 
-            <div><button mat-mini-fab color="primary" (click)="eliminaCentroEducativo(i)" [disabled]="formGroup.disabled">
+            <div><button mat-mini-fab color="primary" (click)="eliminaCentroEducativo(i)">
                 <mat-icon>delete</mat-icon>
             </button></div>
         </div>
 
+        <div [formArrayName]="formControlNames.fotos"
+            *ngFor="let unaFoto of formGroupControls.fotos.controls; let i = index" class="box">
+            <div><app-foto [formControl]="unaFoto"></app-foto></div>
+
+            <div><button mat-mini-fab color="primary" (click)="eliminaUnaFoto(unaFoto.value,i)">
+                <mat-icon>delete</mat-icon>
+            </button></div>
+        </div>
+
+        
+
+
+
+
+
+
+
+
+
         <div>
-            <button mat-raised-button color="primary" (click)="agregaCentroEducativo()" [disabled]="formGroup.disabled">
+            <button mat-raised-button color="primary" (click)="agregaCentroEducativo()">
                 Agrega un Centro Educativo
             </button>
-            <input type="file" [formControlName]='formControlNames.fotos'>
+
+            <button mat-raised-button color="primary" (click)="agregarUnaFoto()">
+                Agrega Foto de Crokis de Abastecimiento
+            </button>
+            
+            
 
         </div>
         
